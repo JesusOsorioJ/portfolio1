@@ -1,0 +1,33 @@
+.word-container {
+  position: relative;
+  display: inline-block;
+  font-size: 2rem;
+}
+
+/* Pseudo-elemento que será la línea */
+.word-container::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;  /* Ubicación de la línea: justo debajo del texto */
+  left: 0;
+  width: 100%;
+  height: 2px;  /* Grosor de la línea */
+  background-color: white;  /* Color de la línea */
+  animation: lineAnimation 2s infinite;
+}
+
+/* Definición de la animación */
+@keyframes lineAnimation {
+  0% {
+    left: 0;
+    width: 0;
+  }
+  50% {
+    left: 0;
+    width: 100%;
+  }
+  100% {
+    left: 100%;
+    width: 0;
+  }
+}
