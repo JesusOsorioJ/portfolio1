@@ -33,7 +33,6 @@
     "disruptiveResponsibilities1": " •  Desarrollo frontend de interfaces de usuario responsivas con React.js, Next.js y Vite.js, optimizando la experiencia en dispositivos móviles y escritorio.",
     "disruptiveResponsibilities2": " •  Creación y gestión de APIs RESTful en el backend con Node.js, asegurando una comunicación eficiente entre el frontend y el backend. ",
     "disruptiveResponsibilities3": " •  Manejo de bases de datos SQL (MySQL, PostgreSQL) y NoSQL (MongoDB, DynamoDB), diseñando esquemas eficientes para la gestión y almacenamiento de datos en el backend.",
-  
     "disruptiveAchievements1": " •  Implementación de una plataforma E-learning y un sistema de backoffice para la gestión interna de operaciones.",
     "disruptiveAchievements2": " •  Desarrollo de una arquitectura multi-tenant para la gestión simultánea de múltiples clientes en una única plataforma.",
     "disruptiveAchievements3": " •  Integración de AWS para almacenamiento de archivos (S3), transcodificación de video (Lambda con MediaConvert) y entrega de contenido vía CloudFront. ",
@@ -45,8 +44,7 @@
     "makeRealResponsibilities1": " •  Desarrollo de aplicaciones web con el stack MERN (MongoDB, Express.js, React.js, Node.js), aplicando buenas prácticas de programación y arquitecturas escalables tanto en frontend como en backend.",
     "makeRealResponsibilities2": " •  Implementación de CI/CD para automatizar despliegues y gestión de bases de datos SQL y NoSQL utilizando Mongoose y Prisma.",
     "makeRealResponsibilities3": " •  Colaboración en equipos multidisciplinarios bajo metodologías ágiles (SCRUM), utilizando herramientas como JIRA para la planificación, revisión de código y optimización de funcionalidades.",
-  
-    "makeRealAchievements1": " •  Quick Call: Proyecto grupal de 3 meses. Desarrollo de una página web para conectar a profesionalesespecializados con usuarios. Tecnologías: React.js, MongoDB, Redux, Express.js, SCRUM, JIRA.",
+    "makeRealAchievements1": " •  Quick Call: Proyecto grupal de 3 meses. Desarrollo de una página web para conectar a profesionales especializados con usuarios. Tecnologías: React.js, MongoDB, Redux, Express.js, SCRUM, JIRA.",
     "makeRealAchievements2": " •  Mi App: Proyecto individual de 2 semanas. Creación de una plataforma web que permite a profesores y estudiantes diseñar y gestionar pruebas en línea. Tecnologías: React.js, Firebase, Firebase Authentication.",
     
     "academicTraining": "Formación académica",
@@ -62,9 +60,9 @@
     "characteristics" : "Características",
     "webPage": "Página Web",
     "expand":"Expandir",
-    "makeItRealTime": "Feb 2022 – May 2022 (3 meses)",
-    "misionTICTime": "May 2021 – Dic 2021 (8 meses)",
-    "universityTime": "Feb 2012 – Ago 2018 (5 años)",
+    "makeItRealTime": "Febrero 2022 – Mayo 2022 (3 meses)",
+    "misionTICTime": "Mayo 2021 – Diciembre 2021 (8 meses)",
+    "universityTime": "Febrero 2012 – Agosto 2018 (5 años)",
   
     "quickcallDescription" : "Proyecto en Reactjs (Front) y Nodejs (Back) para exponer servicios de profesionales especializados en todo tipo de labores como labores domesticas, eléctrica, plomería, mecánica, entre otras. Los clientes podrán conectar con el profesional idóneo según sus necesidades, a través de una interfaz amigable con el usuario",
     "quickcallCharacteristics1" : "Inicio de sesión con encriptación (Jwt)",
@@ -248,5 +246,22 @@
     "pocketCharacteristics3": "Uso de WebSockets para sincronización en tiempo real.",
     "pocketImages1": "Chat interactivo del chatbot (IA).",
     "pocketImages2": "Eliminar chat.",
-    "pocketImages3": "Manejo de internacionalización y temas claro/oscuro."
+    "pocketImages3": "Manejo de internacionalización y temas claro/oscuro.",
+
+  "portfolioDescription": "Aplicación para mostrar portafolio, estudios académicos y proyectos personales. Primera versión.",
+  "portfolioCharacteristics1": "Vista de información general.",
+  "portfolioCharacteristics2": "Vista de experiencia y estudios.",
+  "portfolioCharacteristics3": "Vista para ver detalles de proyectos, implementación de carrusel.",
+  "portfolioImages1": "Landing page.",
+  "portfolioImages2": "Imagen de vista de proyectos creados.",
+  "portfolioImages3": "Ver detalle de proyecto, herramientas y características.",
+  "portfolioImages4": "Tema oscuro/claro e internacionalización.",
+  "portfolioImages5": "Diseño responsivo.",
+
+  "mgpanelDescription": "Maquetación de página web.",
+  "mgpanelCharacteristics1": "Vista de información general.",
+  "mgpanelCharacteristics2": "Configuración de temas e internacionalización.",
+  "mgpanelImages1": "Landing page.",
+  "mgpanelImages2": "Imagen de vista de proyectos creados (swiper).",
+  "mgpanelImages3": "Tema oscuro/claro, internacionalización y diseño responsivo."
   }

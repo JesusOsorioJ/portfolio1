@@ -27,12 +27,12 @@
     "continue": "Continue",
     "listPersonalProjects": "List of personal projects",
     "links": "links",
+    "nothingToShow": "Nothing to show",
 
     "disruptiveTime": "Abr 2023 – Ago 2024 (1 year y 5 months)",
     "disruptiveResponsibilities1": " •  Frontend development of responsive user interfaces with React.js, Next.js and Vite.js, optimizing the experience on mobile and desktop devices.",
     "disruptiveResponsibilities2": " •  Creation and management of RESTful APIs in the backend with Node.js, ensuring efficient communication between frontend and backend.",
     "disruptiveResponsibilities3": " •  SQL (MySQL, PostgreSQL) and NoSQL (MongoDB, DynamoDB) database management, designing efficient schemas for backend data management and storage.",
-  
     "disruptiveAchievements1": " •  Implementation of an E-learning platform and a backoffice system for internal operations management.",
     "disruptiveAchievements2": " •  Development of a multi-tenant architecture for the simultaneous management of multiple clients on a single platform.",
     "disruptiveAchievements3": " •  Integración de AWS para almacenamiento de archivos (S3), transcodificación de video (Lambda con MediaConvert) y entrega de contenido vía CloudFront.",
@@ -40,6 +40,13 @@
     "disruptiveAchievements5": " •  Development of advanced data structures, such as binary and hierarchical trees, for user management.",
     "disruptiveAchievements6": " •  Implementation of cryptocurrency payment methods by consuming APIs for address creation, payment cancellation, mass payments and cashouts, as well as fiat currency payments using Stripe.",
   
+    "makeRealTime": "February 2022 – May 2022 (3 months).",
+    "makeRealResponsibilities1": " •  Web application development using the MERN stack (MongoDB, Express.js, React.js, Node.js), applying best programming practices and scalable architectures in both frontend and backend.",
+    "makeRealResponsibilities2": " •  CI/CD implementation to automate deployments and database management for both SQL and NoSQL using Mongoose and Prisma.",
+    "makeRealResponsibilities3": " •  Collaboration in multidisciplinary teams under agile methodologies (SCRUM), using tools like JIRA for planning, code review, and feature optimization.",
+    "makeRealAchievements1": " •  Quick Call: 3-month group project. Development of a website to connect specialized professionals with users. Technologies: React.js, MongoDB, Redux, Express.js, SCRUM, JIRA.",
+    "makeRealAchievements2": " •  Mi App: 2-week individual project. Creation of a web platform that allows teachers and students to design and manage online tests. Technologies: React.js, Firebase, Firebase Authentication.",
+
     "academicTraining": "Academic training",
     "makeItRealDescription": "Intensive bootcamp focused on web application development using the MERN stack (MongoDB, Express.js, React.js, Node.js) and other tools such as GraphQL, React Native and Docker. The program covers from designing RESTful APIs to creating responsive frontends and database integration, with a focus on best practices, performance and cloud deployment.",
     "misionTICDescription": "Program organized by the Colombian Ministry of ICT, designed to train students in programming and web development skills. The course covers from the fundamentals of programming to the complete development of web applications using tools such as Python, Java, HTML, Flask, and GitHub, with a focus on the implementation of agile methodologies and collaborative work.",
@@ -53,9 +60,9 @@
     "characteristics" : "Characteristics",
     "webPage": "Web page",
     "expand":"Expand",
-    "makeItRealTime": "Feb 2022 – May 2022 (3 months)",
-    "misionTICTime": "May 2021 – Dic 2021 (8 months)",
-    "universityTime": "Feb 2012 – Ago 2018 (5 years)",
+    "makeItRealTime": "February 2022 – May 2022 (3 months)",
+    "misionTICTime": "May 2021 – December 2021 (8 months)",
+    "universityTime": "February 2012 – August 2018 (5 years)",
   
     "quickcallDescription" : "Project in Reactjs (Front) and Nodejs (Back) to expose services of professionals specialized in all types of tasks such as domestic work, electrical, plumbing, mechanics, among others. Clients will be able to connect with an ideal professional according to their needs, through a user-friendly interface.",
     "quickcallCharacteristics1" : "Login with encryption (Jwt)",
@@ -239,5 +246,22 @@
     "pocketCharacteristics3": "Real-time synchronization using WebSockets.",
     "pocketImages1": "Interactive chatbot (AI) chat.",
     "pocketImages2": "Delete chat.",
-    "pocketImages3": "Internationalization handling and light/dark themes."
+    "pocketImages3": "Internationalization handling and light/dark themes.",
+
+    "portfolioDescription": "Application to showcase portfolio, academic studies, and personal projects. First version.",
+    "portfolioCharacteristics1": "General information view.",
+    "portfolioCharacteristics2": "Experience and studies view.",
+    "portfolioCharacteristics3": "Project detail view, carousel implementation.",
+    "portfolioImages1": "Landing page.",
+    "portfolioImages2": "Image of created projects view.",
+    "portfolioImages3": "Project detail view, tools, and features.",
+    "portfolioImages4": "Dark/light theme and internationalization.",
+    "portfolioImages5": "Responsive design.",
+
+    "mgpanelDescription": "Web page layout.",
+    "mgpanelCharacteristics1": "General information view.",
+    "mgpanelCharacteristics2": "Theme configuration and internationalization.",
+    "mgpanelImages1": "Landing page.",
+    "mgpanelImages2": "Image of created projects view (swiper).",
+    "mgpanelImages3": "Dark/light theme, internationalization, and responsive design."
   }

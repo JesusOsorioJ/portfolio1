@@ -10,8 +10,7 @@ import { motion } from "framer-motion";
 import { Email, Github, Linkedin, NextIcon, Phone, PrevIcon, ToolSvg } from "./Icons";
 
 import { useTranslation } from "react-i18next";
-import { databases, generateRandomString, technologies } from "./utils";
-
+import { generateRandomString, technologies } from "./utils";
 
 export const Menu = ({
   inicio,
@@ -217,8 +216,6 @@ export const Carrusel = ({filteredData}) => {
   );
 };
 
-
-
 export const BuscarPorPaginacion = ({filteredData }) => {
   const { t } = useTranslation();
   const [currentPage, setCurrentPage] = useState(1);
@@ -244,7 +241,7 @@ export const BuscarPorPaginacion = ({filteredData }) => {
         >
           <PrevIcon />
         </button>
-        <span className="p-2">Página {currentPage}/{totalPage}</span>
+        <span className="p-2">{t("page")} {currentPage}/{totalPage}</span>
         <button
           className="p-2 text-2xl hover:text-[#E9D8A6] disabled:opacity-50"
           onClick={() =>
@@ -290,14 +287,13 @@ export const BuscarPorPaginacion = ({filteredData }) => {
   );
 };
 
-
 export const CarruselDetails = ({ data }) => {
   const { t } = useTranslation();
 
   const [isOpen, setIsOpen] = useState(false);
   return (
     <button
-      className={`${isOpen ? "fixed top-0 left-0 size-full p-30 z-80" : "w-[500px]"}`}
+      className={`${isOpen ? "fixed top-0 left-0 w-full h-[100vh] p-20 z-80" : "w-[90vw] lg:w-[35vw]"}`}
     >
       <div
         onClick={() => setIsOpen(false)}
@@ -311,18 +307,18 @@ export const CarruselDetails = ({ data }) => {
         // autoplay={{ delay: 2000 }}
         loop={true}
         modules={[Navigation, Pagination, Autoplay]}
-        className={`mySwiper w-full `}
+        className={`mySwiper h-full `}
       >
         {data.imageswebpages.map((d, i) => (
           <SwiperSlide key={i}>
             <a className="flex flex-col gap-1 mb-10">
               <button
                 onClick={() => setIsOpen(true)}
-                className="size-auto relative group overflow-hidden"
+                className="flex size-auto relative group overflow-hidden"
               >
                 <img
                   src={`/assets/photo/${data.url}/${d}.png`}
-                  className="size-auto"
+                  className="size-full bg-cover"
                   alt={d}
                 />
                 <div className="text-[16px] text-left  bg-[#00000081] backdrop-blur-md w-full absolute bottom-0 p-3">
@@ -589,7 +585,6 @@ export const EfectoIconos = ({ data, delay = 0, quitarTexto, svgSize, classAdd }
   );
 };
 
-
 export function EfectoPrincipal() {
   useEffect(() => {
     const fondo1 = document.getElementById("fondo1");
@@ -609,7 +604,7 @@ export function EfectoPrincipal() {
   return (
     <div
       id="fondo2"
-      className="fixed h-screen w-full text-white overflow-hidden"
+      className="fixed h-screen w-full text-white overflow-hidden z-[100000]"
     >
       <div
         id="fondo1"
@@ -628,7 +623,7 @@ export function EfectoPrincipal() {
             <rect width="100%" height="100%" fill="white" />
             <text
               x="50%"
-              y="40%"
+              y="50%"
               textAnchor="middle"
               dominantBaseline="middle"
               fontFamily="Montserrat, sans-serif"
@@ -636,12 +631,12 @@ export function EfectoPrincipal() {
               fontWeight="700"
               fill="black"
             >
-              <tspan x="50%" dy="0">
-                JUAN
-              </tspan>
-              <tspan x="50%" dy="1.2em">
-                LEÓN
-              </tspan>
+              {/*<tspan x="50%" dy="0">*/}
+                  . WEB .
+              {/*</tspan>*/}
+              {/* <tspan x="50%" dy="1.2em">
+                OSORIO
+              </tspan> */}
             </text>
           </mask>
         </defs>
@@ -710,17 +705,30 @@ const BotonMenu = ({ isOpen, setIsOpen }) => {
 };
 
 function SunMoonToggle() {
-  const [isDark, setIsDark] = useState(false);
+  const [darkMode, setDarkMode] = useState(
+    localStorage.getItem("theme") === "dark"
+  );
+
+  useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+      localStorage.setItem("theme", "light");
+    }
+  }, [darkMode]);
+
 
   return (
-    <div className="flex justify-center items-center ">
+    <div className="flex justify-center items-center">
       <motion.div
         className="w-8 h-8 cursor-pointer"
-        onClick={() => setIsDark(!isDark)}
-        animate={{ rotate: isDark ? 360 : 0 }}
+        onClick={() => setDarkMode(!darkMode)}
+        animate={{ rotate: darkMode  ? 360 : 0 }}
         transition={{ duration: 0.5, ease: "easeInOut" }}
       >
-        {isDark ? (
+        {darkMode  ? (
           <motion.svg
             key="moon"
             initial={{ opacity: 0, scale: 0.5 }}
