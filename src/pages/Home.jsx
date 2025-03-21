@@ -28,7 +28,7 @@ export default function Home({
   useEffect(() => {
     inicio.current?.scrollIntoView({ behavior: "smooth" });
     const landing = document.getElementById("inicio");
-    setTimeout(() => landing.classList.add("bg-[#000000a2] "), 3500);
+    setTimeout(() => landing.classList.add("bg-[#000000a2]"), 3500);
     setTimeout(() => landing.classList.add("dark:bg-[#000000c1]"), 3500);
   }, []);
 
@@ -65,7 +65,7 @@ export default function Home({
             </p>
           </EfectoAparecer>
           <div>
-            <EfectoTexto delay={4000} data={t("profile")} />
+            <EfectoTexto delay={4000} classAdd="max-w-[800px] " data={t("profile")} />
           </div>
         </div>
         <div>
@@ -192,7 +192,7 @@ export default function Home({
             Math.floor(Math.random() * 15) + 1
           }.jpg)`,
         }}
-        className="min-h-[60vh] w-screen bg-cover bg-blend-multiply bg-[#000000a2] dark:bg-[#000000c1] p-30"
+        className="min-h-[60vh] w-screen bg-cover bg-blend-multiply bg-[#000000a2] dark:bg-[#000000c1] p-10 md:p-30"
       >
         <EfectoAparecer>
           <p className="text-[40px] lg:text-[60px] uppercase">{t("tools")}</p>
@@ -202,7 +202,7 @@ export default function Home({
       {/* Estudios */}
       <section
         ref={estudios}
-        className="flex flex-col gap-10 justify-start items-center py-20 px-5 lg:px-30 bg-[#252525] dark:bg-black   min-h-screen"
+        className="flex flex-col gap-10 justify-start items-center py-20 px-5 lg:px-30 bg-[#252525] dark:bg-black  min-h-screen"
       >
         <EfectoAparecer>
           <p className="text-[40px] lg:text-[60px] uppercase">
@@ -381,8 +381,9 @@ export const SeccionBuscador = ({ proyectos, contacto, buscador = false }) => {
         href="#portafolio"
         className="w-[250px] text-[20px] group bg-[#005F73] max-h-[50px] relative flex flex-col overflow-y-hidden"
       >
-        <div className="z-[10] min-h-[50px] mx-6 hover:text-black duration-500 ease-in-out flex flex-col items-center justify-center">
-          {t("continue")}
+        <div className="z-[10] min-h-[50px] mx-6 hover:text-black uppercase
+        duration-500 ease-in-out flex flex-col items-center justify-center">
+          {t("contact")}
         </div>
         <div className="absolute z-1 top-0 min-h-[50px] w-full translate-y-full group-hover:translate-y-0 duration-500 ease-in-out bg-white" />
       </button>

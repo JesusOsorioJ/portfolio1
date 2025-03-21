@@ -293,7 +293,7 @@ export const CarruselDetails = ({ data }) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <button
-      className={`${isOpen ? "fixed top-0 left-0 w-full h-[100vh] p-20 z-80" : "w-[90vw] lg:w-[35vw]"}`}
+      className={`${isOpen ? "fixed top-0 left-0 w-full h-[100vh] p-10 lg:p-30 z-80" : "w-[90vw] lg:w-[35vw]"}`}
     >
       <div
         onClick={() => setIsOpen(false)}
@@ -307,14 +307,13 @@ export const CarruselDetails = ({ data }) => {
         // autoplay={{ delay: 2000 }}
         loop={true}
         modules={[Navigation, Pagination, Autoplay]}
-        className={`mySwiper h-full `}
+        className="mySwiper h-full"
       >
         {data.imageswebpages.map((d, i) => (
           <SwiperSlide key={i}>
-            <a className="flex flex-col gap-1 mb-10">
               <button
                 onClick={() => setIsOpen(true)}
-                className="flex size-auto relative group overflow-hidden"
+                className="flex size-full relative group overflow-hidden"
               >
                 <img
                   src={`/assets/photo/${data.url}/${d}.png`}
@@ -325,7 +324,6 @@ export const CarruselDetails = ({ data }) => {
                   <p>{t(`${data.url}Images${i + 1}`)}</p>
                 </div>
               </button>
-            </a>
           </SwiperSlide>
         ))}
       </Swiper>
@@ -632,7 +630,7 @@ export function EfectoPrincipal() {
               fill="black"
             >
               {/*<tspan x="50%" dy="0">*/}
-                  . WEB .
+                WWW
               {/*</tspan>*/}
               {/* <tspan x="50%" dy="1.2em">
                 OSORIO

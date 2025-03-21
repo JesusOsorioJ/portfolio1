@@ -32,7 +32,7 @@ export default function Details({
   useEffect(() => {
     inicio.current?.scrollIntoView({ behavior: "smooth" });
     const landing = document.getElementById("inicio");
-    setTimeout(() => landing.classList.add("bg-[#000000a2] "), 1000);
+    setTimeout(() => landing.classList.add("bg-[#000000a2]"), 1000);
     setTimeout(() => landing.classList.add("dark:bg-[#000000c1]"), 1000);
   }, []);
 
@@ -58,7 +58,7 @@ export default function Details({
             Math.floor(Math.random() * 15) + 1
           }.jpg)`,
         }}
-        className="flex flex-col gap-5 items-center py-30 px-10 lg:px-30 
+        className="flex flex-col gap-5 items-center py-30 px-5 md:px-30 
         bg-cover min-h-screen w-full bg-blend-multiply duration-2000"
       >
         <EfectoAparecer delay={1000}>
