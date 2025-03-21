@@ -705,9 +705,14 @@ const BotonMenu = ({ isOpen, setIsOpen }) => {
 };
 
 function SunMoonToggle() {
-  const [darkMode, setDarkMode] = useState(
-    localStorage.getItem("theme") === "dark"
-  );
+  const [darkMode, setDarkMode] = useState(() => {
+    const storedTheme = localStorage.getItem("theme");
+    if (storedTheme === null) {
+      localStorage.setItem("theme", "dark");
+      return true;
+    }
+    return storedTheme === "dark";
+  });
 
   useEffect(() => {
     if (darkMode) {
