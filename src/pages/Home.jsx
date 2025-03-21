@@ -11,7 +11,6 @@ import {
   Herramientas,
   Menu,
 } from "../components/MyComponent";
-import { ToolSvg } from "../components/Icons";
 import { databases } from "../components/utils";
 
 export default function Home({
@@ -24,15 +23,18 @@ export default function Home({
   isOpen,
   setIsOpen,
 }) {
-  useEffect(() => {
-    inicio.current?.scrollIntoView({ behavior: "smooth" });
-  }, []);
-
   const { t } = useTranslation();
 
+  useEffect(() => {
+    inicio.current?.scrollIntoView({ behavior: "smooth" });
+    const landing = document.getElementById("inicio");
+    setTimeout(() => landing.classList.add("bg-[#000000a2] "), 3500);
+    setTimeout(() => landing.classList.add("dark:bg-[#000000c1]"), 3500);
+  }, []);
+
   return (
-    <div className="text-[16px] text-white text-justify">
-      {/* <EfectoPrincipal /> */}
+    <div className="text-[16px] text-white text-justify bg-[#000000a2]">
+      <EfectoPrincipal />
       <Menu
         inicio={inicio}
         experiencia={experiencia}
@@ -46,13 +48,18 @@ export default function Home({
       {/* Seccion de intro */}
       <section
         ref={inicio}
+        id="inicio"
+        style={{
+          backgroundImage: `url(/assets/images/${
+            Math.floor(Math.random() * 15) + 1
+          }.jpg)`,
+        }}
         className="flex flex-col justify-between gap-10 items-center py-30 px-10 lg:px-30
-            bg-[url(/assets/images/obama.jpg)]  bg-cover min-h-screen w-full bg-blend-multiply bg-[#000000a8]
-            "
+            bg-cover min-h-screen w-full bg-blend-multiply duration-2000"
       >
         <div className="flex flex-col gap-5 items-center">
           <EfectoAparecer delay={5000}>
-            <p className="text-[70px] uppercase">Jesus Osorio</p>
+            <p className="text-[40px] lg:text-[60px] uppercase">Jesus Osorio</p>
             <p className="text-[20px] uppercase text-[#E9D8A6]">
               Full Stack JavaScript
             </p>
@@ -77,9 +84,24 @@ export default function Home({
       {/* Experiencia */}
       <section
         ref={experiencia}
-        className="flex flex-col gap-5 justify-start items-center py-20 px-5 lg:px-30 bg-black min-h-screen"
+        className="flex flex-col gap-5 justify-start items-center py-20 px-5 lg:px-30 bg-[#252525] dark:bg-black min-h-screen"
       >
-        <div className="flex flex-col lg:flex-row ">
+        <div className="flex flex-col gap-10 lg:gap-0 lg:flex-row-reverse ">
+          <div className="flex flex-col items-start lg:items-end">
+            <EfectoAparecer>
+              <p className="uppercase text-[40px] lg:text-[55px]  lg:mt-[-20px]">
+                {t("workExperience")}
+              </p>
+            </EfectoAparecer>
+            <button
+              onClick={() => {
+                herramientas.current?.scrollIntoView({ behavior: "smooth" });
+              }}
+              className="word-container mb-1"
+            >
+              {t("continue")}
+            </button>
+          </div>
           <div className="flex flex-col w-full gap-10">
             <div>
               <EfectoTexto
@@ -160,48 +182,45 @@ export default function Home({
               </EfectoAparecer>
             </div>
           </div>
-          <div className="flex flex-col items-end">
-            <EfectoAparecer>
-              <p className="text-[55px] uppercase mt-[-20px]">
-                {t("workExperience")}
-              </p>
-            </EfectoAparecer>
-            <button
-              onClick={() => {
-                herramientas.current?.scrollIntoView({ behavior: "smooth" });
-              }}
-              className="word-container mb-1"
-            >
-              {t("continue")}
-            </button>
-          </div>
         </div>
       </section>
       {/* Herramientas */}
       <section
         ref={herramientas}
-        className="bg-[url(/assets/images/landing2.jpg)] min-h-[60vh] w-screen bg-cover bg-blend-multiply bg-[#000000a8] p-30"
+        style={{
+          backgroundImage: `url(/assets/images/${
+            Math.floor(Math.random() * 15) + 1
+          }.jpg)`,
+        }}
+        className="min-h-[60vh] w-screen bg-cover bg-blend-multiply bg-[#000000a2] dark:bg-[#000000c1] p-30"
       >
         <EfectoAparecer>
-          <p className="text-[60px] uppercase">{t("tools")}</p>
+          <p className="text-[40px] lg:text-[60px] uppercase">{t("tools")}</p>
         </EfectoAparecer>
         <Herramientas />
       </section>
       {/* Estudios */}
       <section
         ref={estudios}
-        className="flex flex-col gap-10 justify-start items-center py-20 px-5 lg:px-30 bg-black min-h-screen"
+        className="flex flex-col gap-10 justify-start items-center py-20 px-5 lg:px-30 bg-[#252525] dark:bg-black   min-h-screen"
       >
-        <EfectoTexto textSize="text-[60px]" data={t("academicTraining")} />
+        <EfectoAparecer>
+          <p className="text-[40px] lg:text-[60px] uppercase">
+            {t("academicTraining")}
+          </p>
+        </EfectoAparecer>
         <div className="flex flex-col lg:flex-row gap-20">
-          <div className="size-[200px] lg:hidden mb-[-60px] bg-[url(/assets/images/obama.jpg)] bg-cover" />
-          <div className="size-[200px] lg:hidden self-end bg-[url(/assets/images/landing2.jpg)] bg-cover" />
+          <div className="h-[30vh] w-[70%] my-[-30px] self-end lg:hidden mb-[-60px] bg-[url(/assets/photo/miapp/curso1.png)] bg-cover" />
+          <div className="h-[30vh] w-[70%] lg:hidden bg-[url(/assets/photo/quickbet/register.png)] bg-cover" />
           <div className="hidden lg:flex flex-col ">
             <EfectoAparecer className="ml-20 my-[-30px]">
-              <div className="h-[200px] w-[400px] bg-[url(/assets/images/obama.jpg)] bg-cover" />
+              <div className="h-[200px] w-[400px] bg-[url(/assets/photo/quickcall/landing.png)] bg-cover" />
             </EfectoAparecer>
             <EfectoAparecer delay={300}>
-              <div className="h-[300px] w-[400px] bg-[url(/assets/images/landing2.jpg)] bg-cover" />
+              <div className="h-[300px] w-[400px] bg-[url(/assets/photo/miapp/curso1.png)] bg-cover" />
+            </EfectoAparecer>
+            <EfectoAparecer className="ml-20 my-[-30px]" delay={600}>
+              <div className="h-[200px] w-[400px] bg-[url(/assets/photo/quickbet/register.png)] bg-cover" />
             </EfectoAparecer>
           </div>
 
@@ -244,7 +263,7 @@ export default function Home({
               <div className="flex flex-wrap gap-5 w-full ">
                 <button
                   onClick={() =>
-                    contacto.current?.scrollIntoView({ behavior: "smooth" })
+                    proyectos.current?.scrollIntoView({ behavior: "smooth" })
                   }
                   className="text-[20px] group border h-[40px] relative flex 
                   items-center justify-center overflow-y-hidden px-10"
@@ -257,9 +276,18 @@ export default function Home({
                   />
                 </button>
                 <button
-                  onClick={() =>
-                    contacto.current?.scrollIntoView({ behavior: "smooth" })
-                  }
+                  onClick={() => {
+                    const link = document.createElement("a");
+                    const value = "es";
+
+                    if (value == "en") {
+                      link.href = "/assets/cv/CV_EN.pdf";
+                    } else {
+                      link.href = "/assets/cv/CV_ES.pdf";
+                    }
+                    link.download = "CV.pdf";
+                    link.click();
+                  }}
                   className="text-[20px] group border h-[40px] relative flex 
                   items-center justify-center overflow-y-hidden px-10"
                 >
@@ -275,6 +303,15 @@ export default function Home({
           </div>
         </div>
       </section>
+      <div
+        style={{
+          backgroundImage: `url(/assets/images/${
+            Math.floor(Math.random() * 15) + 1
+          }.jpg)`,
+        }}
+        className="bg-cover h-[50vh] w-full  bg-blend-multiply bg-[#000000a2] dark:bg-[#000000c1]"
+      />
+
       <SeccionBuscador proyectos={proyectos} contacto={contacto} />
       <Footer
         inicio={inicio}
@@ -317,15 +354,13 @@ export const SeccionBuscador = ({ proyectos, contacto, buscador = false }) => {
   return (
     <section
       ref={proyectos}
-      className="flex flex-col justify-center items-center gap-[30px] py-[100px] h-full"
+      className="flex flex-col justify-center items-center gap-[30px] py-[100px] h-full bg-[#252525] dark:bg-black"
     >
       <div className="w-full flex flex-col items-center gap-[20px]">
-            <p className="text-[50px] text-center leading-[50px] uppercase">
-              {t("myProjects")}
-            </p>
-            <p className="text-[18px]">
-              {t("listPersonalProjects")}
-            </p>
+        <p className="text-[50px] text-center leading-[50px] uppercase">
+          {t("myProjects")}
+        </p>
+        <p className="text-[18px]">{t("listPersonalProjects")}</p>
         <input
           type="text"
           placeholder="Buscar por nombre o tecnología..."
@@ -341,18 +376,16 @@ export const SeccionBuscador = ({ proyectos, contacto, buscador = false }) => {
         )}
       </div>
 
-        <button
-          onClick={() =>
-            contacto.current?.scrollIntoView({ behavior: "smooth" })
-          }
-          href="#portafolio"
-          className="w-[250px] text-[20px] group bg-[#005F73] max-h-[50px] relative flex flex-col overflow-y-hidden"
-        >
-          <div className="z-[10] min-h-[50px] mx-6 hover:text-black duration-500 ease-in-out flex flex-col items-center justify-center">
-            {t("continue")}
-          </div>
-          <div className="absolute z-1 top-0 min-h-[50px] w-full translate-y-full group-hover:translate-y-0 duration-500 ease-in-out bg-white" />
-        </button>
+      <button
+        onClick={() => contacto.current?.scrollIntoView({ behavior: "smooth" })}
+        href="#portafolio"
+        className="w-[250px] text-[20px] group bg-[#005F73] max-h-[50px] relative flex flex-col overflow-y-hidden"
+      >
+        <div className="z-[10] min-h-[50px] mx-6 hover:text-black duration-500 ease-in-out flex flex-col items-center justify-center">
+          {t("continue")}
+        </div>
+        <div className="absolute z-1 top-0 min-h-[50px] w-full translate-y-full group-hover:translate-y-0 duration-500 ease-in-out bg-white" />
+      </button>
     </section>
   );
 };
