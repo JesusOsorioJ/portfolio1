@@ -176,6 +176,7 @@ export const Carrusel = ({filteredData}) => {
         loop={true}
         modules={[Navigation, Pagination, Autoplay]}
         className="mySwiper w-[90vw]"
+        autoplay={{ delay: 2000, disableOnInteraction: false,  pauseOnMouseEnter: true  }} 
         breakpoints={{
           320: { slidesPerView: 1, spaceBetween: 10 },
           800: { slidesPerView: 2, spaceBetween: 20 },

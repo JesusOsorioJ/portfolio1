@@ -98,7 +98,7 @@ export default function Details({
               classAdd="max-w-[800px]"
               data={t(`${url}Description`)}
             />
-            <EfectoAparecer delay={5000}>
+            <EfectoAparecer delay={3000}>
               <p className="text-base font-bold text-[#E9D8A6]">
                 {t("participants")}
               </p>

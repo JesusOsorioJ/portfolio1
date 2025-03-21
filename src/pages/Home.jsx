@@ -309,7 +309,7 @@ export default function Home({
             Math.floor(Math.random() * 15) + 1
           }.jpg)`,
         }}
-        className="bg-cover h-[50vh] w-full  bg-blend-multiply bg-[#000000a2] dark:bg-[#000000c1]"
+        className="bg-cover h-[30vh] w-full  bg-blend-multiply bg-[#000000a2] dark:bg-[#000000c1]"
       />
 
       <SeccionBuscador proyectos={proyectos} contacto={contacto} />
