@@ -27,9 +27,6 @@ export default function Home({
 
   useEffect(() => {
     inicio.current?.scrollIntoView({ behavior: "smooth" });
-    const landing = document.getElementById("inicio");
-    setTimeout(() => landing.classList.add("bg-[#000000a2]"), 3500);
-    setTimeout(() => landing.classList.add("dark:bg-[#000000c1]"), 3500);
   }, []);
 
   return (
@@ -44,18 +41,12 @@ export default function Home({
         contacto={contacto}
         isOpen={isOpen}
         setIsOpen={setIsOpen}
+        delayOscuro={3500} 
       />
       {/* Seccion de intro */}
       <section
         ref={inicio}
-        id="inicio"
-        style={{
-          backgroundImage: `url(/assets/images/${
-            Math.floor(Math.random() * 15) + 1
-          }.jpg)`,
-        }}
-        className="flex flex-col justify-between gap-10 items-center py-30 px-10 lg:px-30
-            bg-cover min-h-screen w-full bg-blend-multiply duration-2000"
+        className="flex flex-col justify-between gap-10 items-center py-30 px-10 lg:px-30 min-h-screen w-full"
       >
         <div className="flex flex-col gap-5 items-center">
           <EfectoAparecer delay={5000}>
@@ -65,7 +56,7 @@ export default function Home({
             </p>
           </EfectoAparecer>
           <div>
-            <EfectoTexto delay={4000} classAdd="max-w-[800px] " data={t("profile")} />
+            <EfectoTexto delay={4000} classAdd="max-w-[800px]" data={t("profile")} />
           </div>
         </div>
         <div>
@@ -187,12 +178,7 @@ export default function Home({
       {/* Herramientas */}
       <section
         ref={herramientas}
-        style={{
-          backgroundImage: `url(/assets/images/${
-            Math.floor(Math.random() * 15) + 1
-          }.jpg)`,
-        }}
-        className="min-h-[60vh] w-screen bg-cover bg-blend-multiply bg-[#000000a2] dark:bg-[#000000c1] p-10 md:p-30"
+        className="min-h-[60vh] p-10 md:p-30"
       >
         <EfectoAparecer>
           <p className="text-[40px] lg:text-[60px] uppercase">{t("tools")}</p>
@@ -304,12 +290,7 @@ export default function Home({
         </div>
       </section>
       <div
-        style={{
-          backgroundImage: `url(/assets/images/${
-            Math.floor(Math.random() * 15) + 1
-          }.jpg)`,
-        }}
-        className="bg-cover h-[30vh] w-full  bg-blend-multiply bg-[#000000a2] dark:bg-[#000000c1]"
+        className="h-[30vh] w-full"
       />
 
       <SeccionBuscador proyectos={proyectos} contacto={contacto} />

@@ -21,13 +21,31 @@ export const Menu = ({
   contacto,
   isOpen,
   setIsOpen,
+  delayOscuro = 1000
 }) => {
   const navigate = new useNavigate();
   const { t, i18n } = useTranslation();
   
+  useEffect(() => {
+    const fondo = document.getElementById("fondoFixed");
+    setTimeout(() => fondo.classList.add("bg-[#000000a2]"), delayOscuro);
+    setTimeout(() => fondo.classList.add("dark:bg-[#000000c1]"), delayOscuro);
+  }, []);
 
   return (
     <div>
+      {/* Fondo fijo */}
+      <div
+        id="fondoFixed"
+        style={{
+          backgroundImage: `url(/assets/images/${
+            Math.floor(Math.random() * 15) + 1
+          }.jpg)`,
+        }}
+        className="fixed top-0 left-0 bg-cover h-screen w-screen 
+        duration-2000 bg-blend-multiply z-[-10] bg-center"
+      />
+      {/* Botones fijo */}
       <div className="fixed top-[50px] left-[70px] flex items-center justify-center gap-3 z-[110] ">
         <BotonMenu isOpen={isOpen} setIsOpen={setIsOpen} />
         <SunMoonToggle />
@@ -343,7 +361,7 @@ export const Footer = ({
   const { t } = useTranslation();
 
   return (
-    <footer className="flex flex-col gap-[40px] bg-gray-800 text-white 
+    <footer className="flex flex-col gap-[40px] bg-[#1e2939d6] text-white 
     p-[50px] lg:p-[80px]">
           <p className="text-[#E9D8A6] text-[22px] uppercase">{t("links")}</p>
           <div className="flex flex-col items-start gap-[10px] text-[18px]">

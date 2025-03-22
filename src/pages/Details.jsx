@@ -31,9 +31,6 @@ export default function Details({
 
   useEffect(() => {
     inicio.current?.scrollIntoView({ behavior: "smooth" });
-    const landing = document.getElementById("inicio");
-    setTimeout(() => landing.classList.add("bg-[#000000a2]"), 1000);
-    setTimeout(() => landing.classList.add("dark:bg-[#000000c1]"), 1000);
   }, []);
 
   return (
@@ -53,14 +50,7 @@ export default function Details({
       <section
         ref={inicio}
         id="inicio"
-        style={{
-          backgroundImage: `url(/assets/images/${
-            Math.floor(Math.random() * 15) + 1
-          }.jpg)`,
-        }}
-        className="flex flex-col gap-5 items-center py-30 px-5 md:px-30 
-        bg-cover min-h-screen w-full bg-blend-multiply duration-2000"
-      >
+        className="flex flex-col gap-5 items-center py-30 px-5 md:px-30 min-h-screen w-full">
         <EfectoAparecer delay={1000}>
           <p className="text-[50px] uppercase w-fit">{proyect.name}</p>
         </EfectoAparecer>
