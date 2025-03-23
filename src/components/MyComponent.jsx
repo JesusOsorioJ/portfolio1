@@ -25,11 +25,14 @@ export const Menu = ({
 }) => {
   const navigate = new useNavigate();
   const { t, i18n } = useTranslation();
-  
+  const imagesUrl = `url(/assets/images/${Math.floor(Math.random() * 15) + 1}.jpg)`
+  const [backgroundImage, setBackgroundImage] = useState("");
+
   useEffect(() => {
     const fondo = document.getElementById("fondoFixed");
     setTimeout(() => fondo.classList.add("bg-[#000000a2]"), delayOscuro);
     setTimeout(() => fondo.classList.add("dark:bg-[#000000c1]"), delayOscuro);
+    setBackgroundImage(imagesUrl);
   }, []);
 
   return (
@@ -38,9 +41,7 @@ export const Menu = ({
       <div
         id="fondoFixed"
         style={{
-          backgroundImage: `url(/assets/images/${
-            Math.floor(Math.random() * 15) + 1
-          }.jpg)`,
+          backgroundImage: backgroundImage,
         }}
         className="fixed top-0 left-0 bg-cover h-screen w-screen 
         duration-2000 bg-blend-multiply z-[-10] bg-center"

@@ -30,7 +30,7 @@ export default function Home({
   }, []);
 
   return (
-    <div className="text-[16px] text-white text-justify bg-[#000000a2]">
+    <div className="text-[16px] text-white text-justify">
       <EfectoPrincipal />
       <Menu
         inicio={inicio}
@@ -254,11 +254,11 @@ export default function Home({
                   className="text-[20px] group border h-[40px] relative flex 
                   items-center justify-center overflow-y-hidden px-10"
                 >
-                  <div className="z-10 text-[#ffffff] group-hover:text-[#000000] duration-500 ease-in-ou">
+                  <div className="z-10 text-[#ffffff] group-hover:text-[#000000] duration-500 ease-in-out">
                     {t("continue")}
                   </div>
                   <div
-                    className={`absolute top-0 h-[40px] w-full translate-y-full group-hover:translate-y-0 duration-500 ease-in-out bg-[#000000] bg-[#ffffff]`}
+                    className={`absolute top-0 h-[40px] w-full translate-y-full group-hover:translate-y-0 duration-500 ease-in-out bg-[#ffffff]`}
                   />
                 </button>
                 <button
@@ -277,11 +277,11 @@ export default function Home({
                   className="text-[20px] group border h-[40px] relative flex 
                   items-center justify-center overflow-y-hidden px-10"
                 >
-                  <div className="z-10 text-[#ffffff] group-hover:text-[#000000] duration-500 ease-in-ou">
+                  <div className="z-10 text-[#ffffff] group-hover:text-[#000000] duration-500 ease-in-out">
                     {t("downloadResumeSpanish")}
                   </div>
                   <div
-                    className={`absolute top-0 h-[40px] w-full translate-y-full group-hover:translate-y-0 duration-500 ease-in-out bg-[#000000] bg-[#ffffff]`}
+                    className={`absolute top-0 h-[40px] w-full translate-y-full group-hover:translate-y-0 duration-500 ease-in-out bg-[#ffffff]`}
                   />
                 </button>
               </div>
