@@ -251,10 +251,10 @@ export default function Home({
                   onClick={() =>
                     proyectos.current?.scrollIntoView({ behavior: "smooth" })
                   }
-                  className="text-[20px] group border h-[40px] relative flex 
+                  className="text-[18px] group border h-[40px] relative flex 
                   items-center justify-center overflow-y-hidden px-10"
                 >
-                  <div className="z-10 text-[#ffffff] group-hover:text-[#000000] duration-500 ease-in-out">
+                  <div className="z-10 text-[#ffffff] group-hover:text-[#000000] duration-500 ease-in-out uppercase">
                     {t("continue")}
                   </div>
                   <div
@@ -274,10 +274,10 @@ export default function Home({
                     link.download = "CV.pdf";
                     link.click();
                   }}
-                  className="text-[20px] group border h-[40px] relative flex 
+                  className="text-[18px] group border h-[40px] relative flex 
                   items-center justify-center overflow-y-hidden px-10"
                 >
-                  <div className="z-10 text-[#ffffff] group-hover:text-[#000000] duration-500 ease-in-out">
+                  <div className="z-10 text-[#ffffff] group-hover:text-[#000000] duration-500 ease-in-out uppercase">
                     {t("downloadResumeSpanish")}
                   </div>
                   <div
@@ -360,7 +360,7 @@ export const SeccionBuscador = ({ proyectos, contacto, buscador = false }) => {
       <button
         onClick={() => contacto.current?.scrollIntoView({ behavior: "smooth" })}
         href="#portafolio"
-        className="w-[250px] text-[20px] group bg-[#005F73] max-h-[50px] relative flex flex-col overflow-y-hidden"
+        className="w-[250px] text-[18px] group bg-[#005F73] max-h-[50px] relative flex flex-col overflow-y-hidden"
       >
         <div className="z-[10] min-h-[50px] mx-6 hover:text-black uppercase
         duration-500 ease-in-out flex flex-col items-center justify-center">
