@@ -604,19 +604,29 @@ export const EfectoIconos = ({ data, delay = 0, quitarTexto, svgSize, classAdd }
 };
 
 export function EfectoPrincipal() {
-  useEffect(() => {
-    const fondo1 = document.getElementById("fondo1");
-    setTimeout(
-      () => fondo1.classList.replace("bg-white", "bg-transparent"),
-      500
-    );
+  const [viewBox, setViewBox] = useState("0 0 1600 900");
+  const [translate, setTranslate] = useState("translate(334, 334)");
 
+  useEffect(() => {
     const fondo = document.getElementById("fondo");
-    setTimeout(() => fondo.classList.add("opacity-0"), 2500);
+    setTimeout(() => fondo.classList.replace("bg-white", "bg-transparent"), 500);
     setTimeout(() => fondo.classList.add("scale-300"), 1500);
+    setTimeout(() => fondo.classList.add("opacity-0"), 1500);
 
     const fondo2 = document.getElementById("fondo2");
     setTimeout(() => fondo2.classList.add("hidden"), 3500);
+
+    const updateViewBox = () => {
+      const width = window.innerWidth;
+      const height = window.innerHeight;
+      setViewBox(`0 0 ${width} ${height}`);
+      setTranslate(`translate(${(width-232)/2}, ${(height-232)/2})`);
+    };
+
+    updateViewBox();
+    window.addEventListener("resize", updateViewBox);
+    return () => window.removeEventListener("resize", updateViewBox);
+  
   }, []);
 
   return (
@@ -624,38 +634,41 @@ export function EfectoPrincipal() {
       id="fondo2"
       className="fixed h-screen w-full text-white overflow-hidden z-[100000]"
     >
-      <div
-        id="fondo1"
-        className="absolute top-0 bg-white h-screen w-screen duration-2000"
-      />
       <svg
         id="fondo"
-        viewBox="0 0 900 200"
+        viewBox={viewBox}
         preserveAspectRatio="none"
-        className="absolute top-0 left-0 w-screen h-screen duration-1000"
+        className="absolute top-0 left-0 w-screen h-screen duration-1500 bg-white"
         // style={{"position: absolute; top: 0; left: 0; width: 100vw; height: 100vh;"}}
         xmlns="http://www.w3.org/2000/svg"
       >
         <defs>
           <mask id="textMask">
             <rect width="100%" height="100%" fill="white" />
-            <text
-              x="50%"
-              y="50%"
-              textAnchor="middle"
-              dominantBaseline="middle"
-              fontFamily="Montserrat, sans-serif"
-              fontSize="50"
-              fontWeight="700"
+            <g 
+              transform={translate}
               fill="black"
             >
-              {/*<tspan x="50%" dy="0">*/}
-                WWW
-              {/*</tspan>*/}
-              {/* <tspan x="50%" dy="1.2em">
-                OSORIO
-              </tspan> */}
-            </text>
+              <path d="M0,20v32v8v152h232V60v-8V20H0z M224,204H8V60h216V204z M224,52H8V28h216V52z" />
+              <circle cx="20" cy="40" r="8" className="animate-pulse " style={{ animationDuration: "0.8s" }}/>
+              <circle cx="40" cy="40" r="8" className="animate-pulse" style={{ animationDelay: "150ms", animationDuration: "0.8s" }}/>
+              <circle cx="60" cy="40" r="8" className="animate-pulse" style={{ animationDelay: "300ms", animationDuration: "0.8s" }}/>
+              <path
+                d="M96.424,177.676c0.514,0.221,1.049,0.326,1.574,0.326c1.553,0,3.029-0.91,3.678-2.426l36-84
+                c0.871-2.031-0.07-4.383-2.1-5.252c-2.033-0.875-4.385,0.07-5.252,2.1l-36,84C93.453,174.455,94.394,176.807,96.424,177.676z"
+              />
+              <path
+                d="M46.35,133.408l39.096,24.016c0.652,0.4,1.375,0.592,2.09,0.592c1.344,0,2.656-0.678,3.412-1.906
+                  c1.156-1.883,0.568-4.346-1.314-5.502L56.086,130l33.547-20.609c1.883-1.156,2.471-3.619,1.314-5.502
+                  c-1.158-1.881-3.623-2.475-5.502-1.314L46.35,126.592c-1.184,0.728-1.906,2.018-1.906,3.408
+                  C44.443,131.391,45.166,132.682,46.35,133.408z"
+              />
+              <path
+                d="M142.81,109.389L176.358,130l-33.547,20.608c-1.883,1.156-2.471,3.618-1.315,5.501c0.756,1.228,2.068,1.906,3.412,1.906
+                  c0.713,0,1.438-0.192,2.09-0.592l39.096-24.016c1.184-0.727,1.906-2.018,1.906-3.408c0-1.39-0.723-2.68-1.906-3.408
+                  l-39.096-24.018c-1.885-1.158-4.346-0.57-5.502,1.314C140.34,105.77,140.928,108.233,142.81,109.389z"
+              />
+          </g>
           </mask>
         </defs>
         <rect width="100%" height="100%" fill="black" mask="url(#textMask)" />
