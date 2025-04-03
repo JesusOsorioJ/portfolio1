@@ -49,7 +49,7 @@ export default function Home({
         className="flex flex-col justify-between gap-10 items-center py-30 px-10 lg:px-30 min-h-screen w-full"
       >
         <div className="flex flex-col gap-5 items-center">
-          <EfectoAparecer delay={5000}>
+          <EfectoAparecer delay={5000} duration={1500}>
             <p className="text-[40px] lg:text-[60px] uppercase">Jesus Osorio</p>
             <p className="text-[20px] uppercase text-[#E9D8A6]">
               Full Stack JavaScript
@@ -199,13 +199,13 @@ export default function Home({
           <div className="h-[30vh] w-[70%] my-[-30px] self-end lg:hidden mb-[-60px] bg-[url(/assets/photo/miapp/curso1.png)] bg-cover" />
           <div className="h-[30vh] w-[70%] lg:hidden bg-[url(/assets/photo/quickbet/register.png)] bg-cover" />
           <div className="hidden lg:flex flex-col ">
-            <EfectoAparecer className="ml-20 my-[-30px]">
+            <EfectoAparecer className="ml-20 my-[-30px]" translate="-translate-x-full">
               <div className="h-[200px] w-[400px] bg-[url(/assets/photo/quickcall/landing.png)] bg-cover" />
             </EfectoAparecer>
             <EfectoAparecer delay={300}>
               <div className="h-[300px] w-[400px] bg-[url(/assets/photo/miapp/curso1.png)] bg-cover" />
             </EfectoAparecer>
-            <EfectoAparecer className="ml-20 my-[-30px]" delay={600}>
+            <EfectoAparecer className="ml-20 my-[-30px]" delay={600} translate="-translate-x-full">
               <div className="h-[200px] w-[400px] bg-[url(/assets/photo/quickbet/register.png)] bg-cover" />
             </EfectoAparecer>
           </div>
