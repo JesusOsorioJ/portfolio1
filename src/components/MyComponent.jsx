@@ -449,8 +449,7 @@ export const EfectoAparecer = ({
   children,
   translate="translate-y-full",
   delay = 0,
-  className = "",
-  duration = 1000
+  className = ""
 }) => {
   const idRandom = generateRandomString(20);
   const containerRef = useRef(null);
@@ -484,7 +483,7 @@ export const EfectoAparecer = ({
     <div ref={containerRef} className={`relative inline-block overflow-hidden ${className}`}>
       <div
         id={idRandom}
-        className={`${translate} duration-${duration} ease-in-out`}
+        className={`${translate} duration-1000 ease-in-out`}
       >
         {children}
       </div>
