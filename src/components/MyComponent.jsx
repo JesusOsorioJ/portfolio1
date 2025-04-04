@@ -215,7 +215,7 @@ export const Carrusel = ({filteredData}) => {
                   alt={d.imageswebpages[0]}
                 />
                 <div className="text-[18px] bg-[#000000cb] size-full absolute top-0 translate-y-full group-hover:translate-y-0 duration-500 p-10">
-                  <p>{t(`${d.url}Description`)}</p>
+                  <p>{t(`projects.${d.url}.description`)}</p>
                 </div>
               </div>
 
@@ -288,7 +288,7 @@ export const BuscarPorPaginacion = ({filteredData }) => {
                 alt={d.imageswebpages[0]}
               />
               <div className="text-[18px] bg-[#000000cb] size-full absolute top-0 translate-y-full group-hover:translate-y-0 duration-500 p-10">
-                <p>{t(`${d.url}Description`)}</p>
+                <p>{t(`projects.${d.url}.description`)}</p>
               </div>
             </div>
             <div className="z-10 pb-10">
@@ -312,8 +312,8 @@ export const CarruselDetails = ({ data }) => {
 
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <button
-      className={`${isOpen ? "fixed top-0 left-0 w-full h-[100vh] p-10 lg:p-30 z-80" : "w-[90vw] lg:w-[35vw]"}`}
+    <div
+      className={`duration-400 ${isOpen ? "fixed top-0 right-0 w-[100vw] h-[100vh] p-10 lg:p-30 z-80" : "w-[90vw] lg:w-[35vw]"}`}
     >
       <div
         onClick={() => setIsOpen(false)}
@@ -341,13 +341,13 @@ export const CarruselDetails = ({ data }) => {
                   alt={d}
                 />
                 <div className="text-[16px] text-left  bg-[#00000081] backdrop-blur-md w-full absolute bottom-0 p-3">
-                  <p>{t(`${data.url}Images${i + 1}`)}</p>
+                  <p>{t(`projects.${data.url}.images${i + 1}`)}</p>
                 </div>
               </button>
           </SwiperSlide>
         ))}
       </Swiper>
-    </button>
+    </div>
   );
 };
 
