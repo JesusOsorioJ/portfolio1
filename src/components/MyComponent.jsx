@@ -333,7 +333,7 @@ export const CarruselDetails = ({ data }) => {
           <SwiperSlide key={i}>
               <button
                 onClick={() => setIsOpen(true)}
-                className="flex size-full relative group overflow-hidden"
+                className="mb-10 flex size-full relative group overflow-hidden"
               >
                 <img
                   src={`/assets/photo/${data.url}/${d}.png`}

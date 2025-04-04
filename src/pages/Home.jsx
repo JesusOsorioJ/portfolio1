@@ -11,7 +11,7 @@ import {
   Herramientas,
   Menu,
 } from "../components/MyComponent";
-import { databases } from "../components/utils";
+import { projects } from "../components/utils";
 
 export default function Home({
   inicio,
@@ -56,7 +56,11 @@ export default function Home({
             </p>
           </EfectoAparecer>
           <div>
-            <EfectoTexto delay={4000} classAdd="max-w-[800px]" data={t("profile")} />
+            <EfectoTexto
+              delay={4000}
+              classAdd="max-w-[800px]"
+              data={t("profile")}
+            />
           </div>
         </div>
         <div>
@@ -94,92 +98,59 @@ export default function Home({
             </button>
           </div>
           <div className="flex flex-col w-full gap-10">
-            <div>
-              <EfectoTexto
-                classAdd="font-bold uppercase"
-                data="• Disruptive Studio, Guadalajara, Mexico"
-              />
-              <EfectoTexto
-                classAdd="text-[#E9D8A6]"
-                data=" Full Stack JavaScript"
-              />
-              <p>{t("disruptiveTime")}</p>
-              <EfectoAparecer>
-                <div>
-                  <p className="font-bold">{t("responsibilities")}:</p>
-                  <p className="pl-2">{t("disruptiveResponsibilities1")}</p>
-                  <p className="pl-2">{t("disruptiveResponsibilities2")}</p>
-                  <p className="pl-2">{t("disruptiveResponsibilities3")}</p>
-                </div>
-              </EfectoAparecer>
-              <EfectoAparecer>
-                <ul>
-                  <li className="font-bold">{t("importantAchievements")}:</li>
-                  <li className="pl-2">{t("disruptiveAchievements1")} </li>
-                  <li className="pl-2">{t("disruptiveAchievements2")} </li>
-                  <li className="pl-2">{t("disruptiveAchievements3")} </li>
-                  <li className="pl-2">{t("disruptiveAchievements4")} </li>
-                  <li className="pl-2">{t("disruptiveAchievements5")} </li>
-                  <li className="pl-2">{t("disruptiveAchievements6")} </li>
-                </ul>
-                <div className="flex item-center gap-1">
-                  <div className="font-bold">{t("technologies")}:</div>
-                  <div>
-                    JavaScript, Typescript, Node.js, Next.js, Vite, AWS, Prisma,
-                    PostgreSQL, Docker, Socket.io, MongoDB (Mongoose), JSDoc,
-                    React Hook Form.
+            {[
+              {
+                responsibilities: 3,
+                achievements: 6,
+              },
+              {
+                responsibilities: 3,
+                achievements: 2,
+              },
+            ].map((d, i) => (
+              <div key={i}>
+                <EfectoTexto
+                  classAdd="font-bold uppercase"
+                  data={t(`experience.${i}.name`)}
+                />
+                <EfectoTexto
+                  classAdd="text-[#E9D8A6]"
+                  data={t(`experience.${i}.position`)}
+                />
+                <p>{t(`experience.${i}.time`)}</p>
+                <EfectoAparecer>
+                  <ul>
+                    <li className="font-bold">{t("responsibilities")}:</li>
+                    {Array.from({ length: d.responsibilities }, (_, j) => (
+                      <div key={j} className="flex">
+                        <p className="px-2">•</p>
+                        <p>{t(`experience.${i}.responsibilities${j + 1}`)}</p>
+                      </div>
+                    ))}
+                  </ul>
+                </EfectoAparecer>
+                <EfectoAparecer>
+                  <ul>
+                    <li className="font-bold">{t("importantAchievements")}:</li>
+                    {Array.from({ length: d.achievements }, (_, j) => (
+                      <div key={j} className="flex">
+                        <p className="px-2">•</p>
+                        <p>{t(`experience.${i}.achievements${j + 1}`)}</p>
+                      </div>
+                    ))}
+                  </ul>
+                  <div className="flex item-center gap-1 pt-3">
+                    <p className="font-bold">{t("technologies")}:</p>
+                    <p>{t(`experience.${i}.technologies`)}</p>
                   </div>
-                </div>
-              </EfectoAparecer>
-            </div>
-
-            <div>
-              <EfectoTexto
-                classAdd="font-bold uppercase"
-                data="• Make it real (Bootcamp)"
-              />
-              <EfectoTexto classAdd="text-[#E9D8A6]" data="Web developer" />
-              <p>{t("makeRealTime")}</p>
-              <EfectoAparecer>
-                <div className="text-justify">
-                  <p className="font-bold">{t("responsibilities")}:</p>
-                  <p className="pl-2">{t("makeRealResponsibilities1")}</p>
-                  <p className="pl-2">{t("makeRealResponsibilities2")}</p>
-                  <p className="pl-2">{t("makeRealResponsibilities3")}</p>
-                </div>
-              </EfectoAparecer>
-              <EfectoAparecer>
-                <ul>
-                  <li className="font-bold">{t("importantAchievements")}:</li>
-                  <li className="pl-2">
-                    {t("makeRealAchievements1")}{" "}
-                    <a
-                      className="text-[#E9D8A6]"
-                      href="https://quickcall.netlify.app/"
-                    >
-                      LINK
-                    </a>{" "}
-                  </li>
-                  <li className="pl-2">
-                    {t("makeRealAchievements2")}{" "}
-                    <a
-                      className="text-[#E9D8A6]"
-                      href="https://my-appcreate.vercel.app/"
-                    >
-                      LINK
-                    </a>{" "}
-                  </li>
-                </ul>
-              </EfectoAparecer>
-            </div>
+                </EfectoAparecer>
+              </div>
+            ))}
           </div>
         </div>
       </section>
       {/* Herramientas */}
-      <section
-        ref={herramientas}
-        className="min-h-[60vh] p-10 md:p-30"
-      >
+      <section ref={herramientas} className="min-h-[60vh] p-10 md:p-30">
         <EfectoAparecer>
           <p className="text-[40px] lg:text-[60px] uppercase">{t("tools")}</p>
         </EfectoAparecer>
@@ -199,54 +170,70 @@ export default function Home({
           <div className="h-[30vh] w-[70%] my-[-30px] self-end lg:hidden mb-[-60px] bg-[url(/assets/photo/miapp/curso1.png)] bg-cover" />
           <div className="h-[30vh] w-[70%] lg:hidden bg-[url(/assets/photo/quickbet/register.png)] bg-cover" />
           <div className="hidden lg:flex flex-col ">
-            <EfectoAparecer className="ml-20 my-[-30px]" translate="-translate-x-full">
+            <EfectoAparecer
+              className="ml-20 my-[-30px]"
+              translate="-translate-x-full"
+            >
               <div className="h-[200px] w-[400px] bg-[url(/assets/photo/quickcall/landing.png)] bg-cover" />
             </EfectoAparecer>
             <EfectoAparecer delay={300}>
               <div className="h-[300px] w-[400px] bg-[url(/assets/photo/miapp/curso1.png)] bg-cover" />
             </EfectoAparecer>
-            <EfectoAparecer className="ml-20 my-[-30px]" delay={600} translate="-translate-x-full">
+            <EfectoAparecer
+              className="ml-20 my-[-30px]"
+              delay={600}
+              translate="-translate-x-full"
+            >
               <div className="h-[200px] w-[400px] bg-[url(/assets/photo/quickbet/register.png)] bg-cover" />
             </EfectoAparecer>
           </div>
 
           <div className="flex flex-col gap-10 justify-center">
-            <div className="flex flex-col item-center w-full">
-              <div className="flex flex-col gap-4">
-                <EfectoAparecer delay={100}>
+            <div className="flex flex-col gap-4 item-center w-full">
+              {Array.from({ length: 3 }, (_, i) => (
+                <EfectoAparecer delay={100*(i+1)} key={i}>
                   <div className="text-lg font-bold">
-                    • Full Stack JavaScript
+                    {t(`academy.${i}.title`)}
                   </div>
-                  <div className="font-bold">
-                    Make it real, Medellín, Colombia.
+                  <div className="text-[#E9D8A6]">
+                    {t(`academy.${i}.university`)}
                   </div>
-                  <div>{t("makeItRealTime")}</div>
-                  <div>{t("makeItRealDescription")}</div>
+                  <div>{t(`academy.${i}.time`)}</div>
+                  <div>{t(`academy.${i}.description`)}</div>
                 </EfectoAparecer>
-                <EfectoAparecer delay={200}>
-                  <div className="text-lg font-bold">• Web developer</div>
-                  <div className="font-bold">
-                    MisionTIC 2022, Universidad del norte, Barranquilla,
-                    Colombia.
-                  </div>
-                  <div>{t("misionTICTime")}</div>
-                  <div>{t("misionTICDescription")}</div>
-                </EfectoAparecer>
-                <EfectoAparecer delay={300}>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* Cursos */}
+      <section
+        ref={estudios}
+        className="flex flex-col gap-10 justify-start items-center py-20 px-5 lg:px-30"
+      >
+        <EfectoAparecer>
+          <p className="text-[40px] lg:text-[60px] uppercase">
+            {t("coursesCertifications")}
+          </p>
+        </EfectoAparecer>
+          <div className="flex flex-col gap-10 justify-center">
+            <div className="flex flex-col gap-4 item-center w-full">
+              {Array.from({ length: 2}, (_, i) => (
+                <EfectoAparecer delay={100*(i+1)} key={i}>
                   <div className="text-lg font-bold">
-                    • {t("chemicalEngineer")}
+                    {t(`courses.${i}.title`)}
                   </div>
-                  <div className="font-bold">
-                    Universidad de Cartagena, Cartagena, Colombia.
+                  <div className="text-[#E9D8A6]">
+                    {t(`courses.${i}.university`)}
                   </div>
-                  <div>{t("universityTime")}</div>
-                  <div>{t("researchGroup")}</div>
+                  <div>{t(`courses.${i}.time`)}</div>
+                  <div>{t(`courses.${i}.description`)}</div>
                 </EfectoAparecer>
-              </div>
+              ))}
             </div>
 
             <EfectoAparecer>
-              <div className="flex flex-wrap gap-5 w-full ">
+              <div className="flex flex-wrap gap-5 w-full justify-center ">
                 <button
                   onClick={() =>
                     proyectos.current?.scrollIntoView({ behavior: "smooth" })
@@ -286,12 +273,8 @@ export default function Home({
                 </button>
               </div>
             </EfectoAparecer>
-          </div>
         </div>
       </section>
-      <div
-        className="h-[30vh] w-full"
-      />
 
       <SeccionBuscador proyectos={proyectos} contacto={contacto} />
       <Footer
@@ -309,17 +292,17 @@ export default function Home({
 export const SeccionBuscador = ({ proyectos, contacto, buscador = false }) => {
   const { t } = useTranslation();
   const [search, setSearch] = useState("");
-  const [filteredData, setFilteredData] = useState(databases);
+  const [filteredData, setFilteredData] = useState(projects);
 
   useEffect(() => {
     setFilteredData(
-      databases.filter(
+      projects.filter(
         (d) =>
           d.name.toLowerCase().includes(search.toLowerCase()) ||
-          d.technologies.front.some((tech) =>
+          d.technologies.frontend.some((tech) =>
             tech.toLowerCase().includes(search.toLowerCase())
           ) ||
-          d.technologies.back.some((tech) =>
+          d.technologies.backend.some((tech) =>
             tech.toLowerCase().includes(search.toLowerCase())
           ) ||
           d.technologies.database.some((tech) =>
@@ -330,7 +313,7 @@ export const SeccionBuscador = ({ proyectos, contacto, buscador = false }) => {
           )
       )
     );
-  }, [search, databases]);
+  }, [search, projects]);
 
   return (
     <section
@@ -362,8 +345,10 @@ export const SeccionBuscador = ({ proyectos, contacto, buscador = false }) => {
         href="#portafolio"
         className="w-[250px] text-[18px] group bg-[#005F73] max-h-[50px] relative flex flex-col overflow-y-hidden"
       >
-        <div className="z-[10] min-h-[50px] mx-6 hover:text-black uppercase
-        duration-500 ease-in-out flex flex-col items-center justify-center">
+        <div
+          className="z-[10] min-h-[50px] mx-6 hover:text-black uppercase
+        duration-500 ease-in-out flex flex-col items-center justify-center"
+        >
           {t("contact")}
         </div>
         <div className="absolute z-1 top-0 min-h-[50px] w-full translate-y-full group-hover:translate-y-0 duration-500 ease-in-out bg-white" />
