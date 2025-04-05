@@ -213,9 +213,9 @@ export const Carrusel = ({filteredData}) => {
           pauseOnMouseEnter: true,
         }}
         breakpoints={{
-          320: { slidesPerView: 1.2},
-          800: { slidesPerView: 2.2},
-          1500: { slidesPerView: 3.2},
+          320: { slidesPerView: 1},
+          800: { slidesPerView: 2},
+          1500: { slidesPerView: 3},
         }}
       >
         {filteredData.map((d, i) => (
@@ -337,7 +337,7 @@ export const CarruselDetails = ({ project }) => {
         />
         <SwiperCarruselDetails project={project} setIsOpen={setIsOpen} />
       </div>
-      <div className="w-[90vw] lg:w-[40vw]">
+      <div className="w-[90vw] lg:w-[35vw]">
         <SwiperCarruselDetails project={project} setIsOpen={setIsOpen} />
       </div>
     </div>
@@ -359,23 +359,23 @@ const SwiperCarruselDetails = ({ project, setIsOpen }) => {
         pauseOnMouseEnter: true,
       }}
       breakpoints={{
-        320: { slidesPerView: 1.2},
+        320: { slidesPerView: 1},
       }}
     >
       {project.images.map((d, i) => (
         <SwiperSlide key={i}>
           <button
             onClick={() => setIsOpen(true)}
-            className="flex flex-col size-full relative group overflow-hidden px-[-240px]"
+            className="flex flex-col size-full group"
           >
+            <div className="text-[14px] text-left bg-[#000000] backdrop-blur-md w-full p-3">
+              <p>{t(`projects.${project.no}.images.${i}.description`)}</p>
+            </div>
             <img
               src={`/assets/photo/${project.url}/${d.name}.png`}
               className="size-full bg-cover"
               alt={d}
             />
-            <div className="text-[14px] text-left bg-[#000000] backdrop-blur-md w-full p-3 border border-[#313131] ">
-              <p>{t(`projects.${project.no}.images.${i}.description`)}</p>
-            </div>
           </button>
         </SwiperSlide>
       ))}
