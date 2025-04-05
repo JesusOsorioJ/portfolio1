@@ -8,8 +8,7 @@
   "lightMode": "Light Mode",
   "email": "Email",
   "phone": "Phone",
-  "theseAreMyContactPages": "These are my contact pages, in my github you can see all my projects.",
-
+  "theseAreMyContactPages": "These are my contact pages, in my github you can see all my projects",
   "profile": "Full Stack JavaScript Developer with more than a year of experience in web application development, specialized in the MERN stack (MongoDB, Express, React, Node.js). Experienced in creating responsive frontend interfaces and implementing RESTful APIs on the backend. SQL and NoSQL database management, and familiarity with agile methodologies (SCRUM and JIRA). Chemical engineer with a background in logic and programming, using tools such as Matlab, Simulink and Wolfram.",
   "workExperience": "Experience",
   "description": "Description",
@@ -28,301 +27,979 @@
   "listPersonalProjects": "List of personal projects",
   "links": "links",
   "nothingToShow": "Nothing to show",
-
   "academicTraining": "Academic training",
   "languages": "Languages",
   "intermediateLevel": "Intermediate level",
-
   "developer": "Developer",
   "participants": "Participants",
-  "characteristics": "characteristics",
+  "characteristics": "Characteristics",
   "webPage": "Web page",
   "expand": "Expand",
   "coursesCertifications": "Courses and certifications",
-
-  "experience": {
-    "0": {
+  "experience": [
+    {
       "name": "• Disruptive Studio, Guadalajara, Mexico",
       "position": "Full stack developer",
       "time": "April 2023 – August 2024 (1 year y 5 months)",
-      "responsibilities1": " •  Frontend development of responsive user interfaces with React.js, Next.js and Vite.js, optimizing the experience on mobile and desktop devices.",
-      "responsibilities2": " •  Creation and management of RESTful APIs in the backend with Node.js, ensuring efficient communication between frontend and backend.",
-      "responsibilities3": " •  SQL (MySQL, PostgreSQL) and NoSQL (MongoDB, DynamoDB) database management, designing efficient schemas for backend data management and storage.",
-      "achievements1": " •  Implementation of an E-learning platform and a backoffice system for internal operations management.",
-      "achievements2": " •  Development of a multi-tenant architecture for the simultaneous management of multiple clients on a single platform.",
-      "achievements3": " •  Integración de AWS para almacenamiento de archivos (S3), transcodificación de video (Lambda con MediaConvert) y entrega de contenido vía CloudFront.",
-      "achievements4": " •  Creation of technical and endpoint documentation using JSDoc and Swagger, as well as implementation of unit tests for the backend.",
-      "achievements5": " •  Development of advanced data structures, such as binary and hierarchical trees, for user management.",
-      "achievements6": " •  Implementation of cryptocurrency payment methods by consuming APIs for address creation, payment cancellation, mass payments and cashouts, as well as fiat currency payments using Stripe.",
-      "technologies": "JavaScript, Typescript, Node.js, Next.js, Vite, AWS, Prisma, PostgreSQL, Docker, Socket.io, MongoDB (Mongoose), JSDoc, React Hook Form"
+      "responsibilities": [
+        "Frontend development of responsive user interfaces with React.js, Next.js and Vite.js, optimizing the experience on mobile and desktop devices.",
+        "Creation and management of RESTful APIs in the backend with Node.js, ensuring efficient communication between frontend and backend.",
+        "SQL (MySQL, PostgreSQL) and NoSQL (MongoDB, DynamoDB) database management, designing efficient schemas for backend data management and storage."
+      ],
+      "achievements": [
+        "Implementation of an E-learning platform and a backoffice system for internal operations management.",
+        "Development of a multi-tenant architecture for the simultaneous management of multiple clients on a single platform.",
+        "Integración de AWS para almacenamiento de archivos (S3), transcodificación de video (Lambda con MediaConvert) y entrega de contenido vía CloudFront.",
+        "Creation of technical and endpoint documentation using JSDoc and Swagger, as well as implementation of unit tests for the backend.",
+        "Development of advanced data structures, such as binary and hierarchical trees, for user management.",
+        "Implementation of cryptocurrency payment methods by consuming APIs for address creation, payment cancellation, mass payments and cashouts, as well as fiat currency payments using Stripe."
+      ],
+      "technologies": "JavaScript, Typescript, Node.js, Next.js, Vite, AWS, Prisma, PostgreSQL, Docker, Socket.io, MongoDB (Mongoose), JSDoc, React Hook Form."
     },
-    "1": {
+    {
       "name": "• Make it real (Bootcamp)",
       "position": "Web developer",
       "time": "February 2022 – May 2022 (3 months).",
-      "responsibilities1": " •  Web application development using the MERN stack (MongoDB, Express.js, React.js, Node.js), applying best programming practices and scalable architectures in both frontend and backend.",
-      "responsibilities2": " •  CI/CD implementation to automate deployments and database management for both SQL and NoSQL using Mongoose and Prisma.",
-      "responsibilities3": " •  Collaboration in multidisciplinary teams under agile methodologies (SCRUM), using tools like JIRA for planning, code review, and feature optimization.",
-      "achievements1": " •  Quick Call: 3-month group project. Development of a website to connect specialized professionals with users. Technologies: React.js, MongoDB, Redux, Express.js, SCRUM, JIRA.",
-      "achievements2": " •  Mi App: 2-week individual project. Creation of a web platform that allows teachers and students to design and manage online tests. Technologies: React.js, Firebase, Firebase Authentication.",
+      "responsibilities": [
+        "Web application development using the MERN stack (MongoDB, Express.js, React.js, Node.js), applying best programming practices and scalable architectures in both frontend and backend.",
+        "CI/CD implementation to automate deployments and database management for both SQL and NoSQL using Mongoose and Prisma.",
+        "Collaboration in multidisciplinary teams under agile methodologies (SCRUM), using tools like JIRA for planning, code review, and feature optimization."
+      ],
+      "achievements": [
+        "Quick Call: 3-month group project. Development of a website to connect specialized professionals with users. Technologies: React.js, MongoDB, Redux, Express.js, SCRUM, JIRA.",
+        "Mi App: 2-week individual project. Creation of a web platform that allows teachers and students to design and manage online tests. Technologies: React.js, Firebase, Firebase Authentication."
+      ],
       "technologies": "JavaScript, Typescript, React.js, Node.js, Express, Docker, MongoDB (Mongoose)"
     }
-  },
-
-  "academy": {
-    "0": {
+  ],
+  "academy": [
+    {
       "university": "Make it real, Medellín, Colombia",
       "title": "• Full Stack JavaScript",
       "time": "February 2022 – May 2022 (3 months).",
       "description": "Intensive bootcamp focused on web application development using the MERN stack (MongoDB, Express.js, React.js, Node.js) and other tools such as GraphQL, React Native and Docker. The program covers from designing RESTful APIs to creating responsive frontends and database integration, with a focus on best practices, performance and cloud deployment."
     },
-    "1": {
+    {
       "university": "MisionTIC 2022, Universidad del norte, Barranquilla, Colombia.",
       "title": "• Web developer",
       "time": "May 2021 – December 2021 (8 months)",
       "description": "Program organized by the Colombian Ministry of ICT, designed to train students in programming and web development skills. The course covers from the fundamentals of programming to the complete development of web applications using tools such as Python, Java, HTML, Flask, and GitHub, with a focus on the implementation of agile methodologies and collaborative work."
     },
-    "2": {
+    {
       "university": "Universidad de Cartagena, Cartagena, Colombia",
       "title": "• Chemical engineer",
       "time": "February 2012 – August 2018 (5 years)",
       "description": "Research Group: Process design and use of biomass. IDAB."
     }
-  },
-
-  "courses": {
-    "0": {
+  ],
+  "courses": [
+    {
       "university": "AvanzaTEC with Cisco",
       "title": "• Path 1: Cybersecurity",
       "time": "January 2025 – March 2022 (106 hours)",
       "description": "This program covers everything from basic concepts to advanced cybersecurity techniques, including an introduction to cybersecurity, network defense, endpoint security, and cyber threat management. This course provides fundamental skills to face challenges in the field of information security."
     },
-    "1": {
+    {
       "university": "TalentoTech with University of Antioquia",
       "title": "• Cloud Architecture - Explorer Level",
       "time": "November 2024 – February 2025 (159 hours)",
       "description": "This bootcamp introduces the essential principles and techniques for designing cloud architectures, covering basic concepts of cloud computing, types of clouds and environments, PaaS services and web application deployment, as well as architectural design and cloud security. This course strengthens understanding and practical skills in cloud-based solutions."
     }
-  },
-
-  "projects": {
-    "quickcall": {
+  ],
+  "projects": [
+    {
+      "no": 0,
+      "name": "Quick call",
+      "url": "quickcall",
+      "participants": [
+        {
+          "rol": "developer",
+          "name": "Luis Alberto Salas",
+          "linkedin": "https://www.linkedin.com/in/luis-salcedo-salas/"
+        },
+        {
+          "rol": "developer",
+          "name": "Francisco Huertas Cruz",
+          "linkedin": "https://www.linkedin.com/in/francisco-huertas-cruz/"
+        },
+        {
+          "rol": "developer",
+          "name": "Jesus Osorio Jimenez",
+          "linkedin": "https://www.linkedin.com/in/jesus-david-osorio-jimenez/"
+        }
+      ],
+      "technologies": {
+        "frontend": ["react", "redux", "sass", "JS", "socket"],
+        "backend": ["node", "sendgrid", "cloudinary", "stripe"],
+        "database": ["mongodb"],
+        "test": ["jest", "cypress"]
+      },
+      "backend": "https://github.com/JesusOsorioJ/Quick-call-Backend",
+      "frontend": "https://github.com/Luis-S-S/quick-call",
+      "webpage": "https://quickcall.netlify.app/",
+      "videopage": null,
       "description": "Project in Reactjs (Front) and Nodejs (Back) to expose services of professionals specialized in all types of tasks such as domestic work, electrical, plumbing, mechanics, among others. Clients will be able to connect with an ideal professional according to their needs, through a user-friendly interface.",
-      "characteristics1": "Login with encryption (Jwt)",
-      "characteristics2": "Professional filter by categories",
-      "characteristics3": "Sending user authentication email",
-      "characteristics4": "Sending images with Cloudinary",
-      "characteristics5": "Payment gateway (stripe)",
-      "characteristics6": "Unit and functional testing (cypress, jest)",
-      "characteristics7": "Using SCRUM tools (Jira) and Figma",
-      "images1": "Home page",
-      "images2": "Customer query form",
-      "images3": "Job management",
-      "images4": "Live chat with customers",
-      "images5": "Strike payment gateway",
-      "images6": "User authentication"
+      "characteristics": [
+        "Login with encryption (Jwt)",
+        "Professional filter by categories",
+        "Sending user authentication email",
+        "Sending images with Cloudinary",
+        "Payment gateway (stripe)",
+        "Unit and functional testing (cypress, jest)",
+        "Using SCRUM tools (Jira) and Figma"
+      ],
+      "images": [
+        {
+          "name": "landing",
+          "description": "Home page"
+        },
+        {
+          "name": "consulta",
+          "description": "Customer query form"
+        },
+        {
+          "name": "trabajos",
+          "description": "Job management"
+        },
+        {
+          "name": "chat",
+          "description": "Live chat with customers"
+        },
+        {
+          "name": "pasarelapago",
+          "description": "Strike payment gateway"
+        },
+        {
+          "name": "login",
+          "description": "User authentication"
+        }
+      ]
     },
-    "miapp": {
+    {
+      "no": 1,
+      "name": "Mi app",
+      "url": "miapp",
+      "participants": [
+        {
+          "rol": "developer",
+          "name": "Jesus Osorio Jimenez",
+          "linkedin": "https://www.linkedin.com/in/jesus-david-osorio-jimenez/"
+        }
+      ],
+      "technologies": {
+        "frontend": ["react", "sass", "redux", "JS"],
+        "backend": [],
+        "database": ["firebase"],
+        "test": []
+      },
+      "backend": null,
+      "frontend": "https://github.com/JesusOsorioJ/my-app",
+      "webpage": "https://my-appcreate.vercel.app/",
+      "videopage": "https://www.youtube.com/watch?v=QLfULI03pl0",
       "description": "Project carried out in Firebase (FB authentication, FB Realtime Database) for the creation and management of online courses and exams. This page offers students and teachers tools to be able to take online tests and tests simultaneously.",
-      "characteristics1": "Login with encryption (Jwt)",
-      "characteristics2": "Creation and management of online tests",
-      "characteristics3": "Creation and management of online courses",
-      "characteristics4": "Possibility of managing live or timed tests",
-      "characteristics5": "Use of SCRUM tools (Jira) and Figma",
-      "images1": "Creation of questionnaires",
-      "images2": "Registration and user authentication",
-      "images3": "Management of students by course",
-      "images4": "Management of online tests",
-      "images5": "Course management",
-      "images6": "Subscription payment"
+      "characteristics": [
+        "Login with encryption (Jwt)",
+        "Creation and management of online tests",
+        "Creation and management of online courses",
+        "Possibility of managing live or timed tests",
+        "Use of SCRUM tools (Jira) and Figma"
+      ],
+      "images": [
+        {
+          "name": "cuestionario1",
+          "description": "Creation of questionnaires"
+        },
+        {
+          "name": "signup",
+          "description": "Registration and user authentication"
+        },
+        {
+          "name": "curso1",
+          "description": "Management of students by course"
+        },
+        {
+          "name": "envivo",
+          "description": "Management of online tests"
+        },
+        {
+          "name": "curso",
+          "description": "Course management"
+        },
+        {
+          "name": "suscripcion",
+          "description": "Subscription payment"
+        }
+      ]
     },
-    "makerhub": {
+    {
+      "no": 2,
+      "name": "Maker Hub (en desarrollo)",
+      "url": "makerhub",
+      "participants": [
+        {
+          "rol": "developer",
+          "name": "German Escobar ",
+          "linkedin": "https://www.linkedin.com/in/germanescobar/"
+        },
+        {
+          "rol": "developer",
+          "name": "Jesus Osorio Jimenez",
+          "linkedin": "https://www.linkedin.com/in/jesus-david-osorio-jimenez/"
+        }
+      ],
+      "technologies": {
+        "frontend": ["vite", "bootstrap"],
+        "backend": ["prisma", "TS", "express", "node"],
+        "database": ["postgresql"],
+        "test": []
+      },
+      "backend": null,
+      "frontend": null,
+      "webpage": null,
+      "videopage": null,
       "description": "Project in Vite.js (Front) and Node.js (Back) for the management of job applications for Make It Real students (Bootcamp, medellin, Colombia)",
-      "responsibilities1": "Creation of frontend view (Admin, Admindetails and Home)",
-      "responsibilities2": "Creation of components and sub views (Login, Delete, Create and Update modal)",
-      "responsibilities3": "Implementation of TypeScript (Interface, Type and InitialValue)",
-      "responsibilities4": "Creation of services, applicationlog, application and user",
-      "responsibilities5": "Implementation of Prisma and DB connection (Backend)",
-      "responsibilities6": "Configuration for migration and initial seeding (faker library)",
-      "characteristics1": "User login (MAKER, ADMIN)",
-      "characteristics2": "Maker application management (CRUD)",
-      "characteristics3": "Administrator queryParams filters by status, name, email, cohort",
-      "characteristics4": "Maker management by administrator (CRUD)",
-      "characteristics5": "Prisma implementation",
-      "images1": "Login (maker, administrator)",
-      "images2": "Maker view: Applications by maker and status",
-      "images3": "Modal for creating application",
-      "images4": "Modal for viewing and modifying application",
-      "images5": "Administration view: Maker detail by ID",
-      "images6": "Form to update maker",
-      "images7": "Administration view: Maker management",
-      "images8": "Modal to delete maker or application"
+      "responsibilities": [
+        "Creation of frontend view (Admin, Admindetails and Home)",
+        "Creation of components and sub views (Login, Delete, Create and Update modal)",
+        "Implementation of TypeScript (Interface, Type and InitialValue)",
+        "Creation of services, applicationlog, application and user",
+        "Implementation of Prisma and DB connection (Backend)",
+        "Configuration for migration and initial seeding (faker library)"
+      ],
+      "characteristics": [
+        "User login (MAKER, ADMIN)",
+        "Maker application management (CRUD)",
+        "Administrator queryParams filters by status, name, email, cohort",
+        "Maker management by administrator (CRUD)",
+        "Prisma implementation"
+      ],
+      "images": [
+        {
+          "name": "login",
+          "description": "Login (maker, administrator)"
+        },
+        {
+          "name": "makerview",
+          "description": "Maker view: Applications by maker and status"
+        },
+        {
+          "name": "makernew",
+          "description": "Modal for creating application"
+        },
+        {
+          "name": "makerupdate",
+          "description": "Modal for viewing and modifying application"
+        },
+        {
+          "name": "admindetails",
+          "description": "Administration view: Maker detail by ID"
+        },
+        {
+          "name": "adminUpdate",
+          "description": "Form to update maker"
+        },
+        {
+          "name": "adminview",
+          "description": "Administration view: Maker management"
+        },
+        {
+          "name": "delete",
+          "description": "Modal to delete maker or application"
+        }
+      ]
     },
-    "archibige": {
+    {
+      "no": 3,
+      "name": "ArchiBige Doc",
+      "url": "archibige",
+      "participants": [
+        { "rol": "company", "name": "Ilia Sofia Castilla", "linkedin": "" },
+        {
+          "rol": "developer",
+          "name": "Jesus Osorio Jimenez",
+          "linkedin": "https://www.linkedin.com/in/jesus-david-osorio-jimenez/"
+        }
+      ],
+      "technologies": {
+        "frontend": ["angular", "tailwind", "TS", "gapsap"],
+        "backend": [],
+        "database": [],
+        "test": []
+      },
+      "backend": null,
+      "frontend": "https://github.com/JesusOsorioJ/empresasofia",
+      "webpage": "https://pgdi.vercel.app/",
+      "videopage": null,
       "description": "Project in Angular.js for the creation of a file consulting company page, libraries and documentation center, aimed at providing training and advice.",
-      "characteristics1": "Landing page with carousel",
-      "characteristics2": "General information about the company",
-      "characteristics3": "Customer opinions carousel view",
-      "characteristics4": "Google maps location",
-      "characteristics5": "Animations and scrolltrigger gsap",
-      "images1": "Home page",
-      "images2": "Company description",
-      "images3": "Services provided",
-      "images4": "Customer reviews in carousel",
-      "images5": "Location with google maps"
+      "characteristics": [
+        "Landing page with carousel",
+        "General information about the company",
+        "Customer opinions carousel view",
+        "Google maps location",
+        "Animations and scrolltrigger gsap"
+      ],
+      "images": [
+        {
+          "name": "landing",
+          "description": "Home page"
+        },
+        {
+          "name": "somos",
+          "description": "Company description"
+        },
+        {
+          "name": "servicios",
+          "description": "Services provided"
+        },
+        {
+          "name": "opiniones",
+          "description": "Customer reviews in carousel"
+        },
+        {
+          "name": "ubicacion",
+          "description": "Location with google maps"
+        }
+      ]
     },
-    "testenglish": {
+    {
+      "no": 4,
+      "name": "Test English",
+      "url": "testenglish",
+      "participants": [
+        {
+          "rol": "developer",
+          "name": "Jesus Osorio Jimenez",
+          "linkedin": "https://www.linkedin.com/in/jesus-david-osorio-jimenez/"
+        }
+      ],
+      "technologies": {
+        "frontend": ["nextjs", "TS", "tailwind", "react hook form", "eslint"],
+        "backend": ["prisma"],
+        "database": ["postgresql"],
+        "test": []
+      },
+      "backend": null,
+      "frontend": "https://github.com/JesusOsorioJ/testenglish",
+      "webpage": "https://testenglish.vercel.app/",
+      "videopage": null,
       "description": "Frontend/backend project made in Nextjs for the generation of a page to evaluate English vocabulary with words from different categories.",
-      "characteristics1": "User login and signup",
-      "characteristics2": "Filter words by type and grade made",
-      "characteristics3": "User evaluation table by word",
-      "characteristics4": "Database migration/seeding (prisma)",
-      "characteristics5": "Using router.query for filters",
-      "images1": "Home page",
-      "images2": "User login and signup",
-      "images3": "User login view",
-      "images4": "Word evaluation table",
-      "images5": "List filter by grades and type of word"
+      "characteristics": [
+        "User login and signup",
+        "Filter words by type and grade made",
+        "User evaluation table by word",
+        "Database migration/seeding (prisma)",
+        "Using router.query for filters"
+      ],
+      "images": [
+        {
+          "name": "landing",
+          "description": "Home page"
+        },
+        {
+          "name": "login",
+          "description": "User login and signup"
+        },
+        {
+          "name": "loginuser",
+          "description": "User login view"
+        },
+        {
+          "name": "testEn",
+          "description": "Word evaluation table"
+        },
+        {
+          "name": "filter",
+          "description": "List filter by grades and type of word"
+        }
+      ]
     },
-    "megatv": {
+    {
+      "no": 5,
+      "name": "Mega Tv",
+      "url": "megatv",
+      "participants": [
+        {
+          "rol": "developer",
+          "name": "Jesus Osorio Jimenez",
+          "linkedin": "https://www.linkedin.com/in/jesus-david-osorio-jimenez/"
+        }
+      ],
+      "technologies": {
+        "frontend": ["react", "sass", "JS", "redux"],
+        "backend": ["node", "nodemon", "express"],
+        "database": ["mongodb"],
+        "test": []
+      },
+      "backend": "https://github.com/JesusOsorioJ/megatvback",
+      "frontend": "https://github.com/JesusOsorioJ/megatv",
+      "webpage": "https://megatv.vercel.app/",
+      "videopage": null,
       "description": "Project in React.js (Front) and Node.js (Back) for page with login and registration and crud of TV series elements",
-      "characteristics1": "Form submission by clients",
-      "characteristics2": "Upload of database addresses in client form",
-      "characteristics3": "User evaluation table by word",
-      "characteristics4": "User authentication email submission",
-      "characteristics5": "User friendly and modern design",
-      "images1": "Home page",
-      "images2": "Email and phone submission form",
-      "images3": "Available TV plans",
-      "images4": "Available addresses in DB"
+      "characteristics": [
+        "Form submission by clients",
+        "Upload of database addresses in client form",
+        "User evaluation table by word",
+        "User authentication email submission",
+        "User friendly and modern design"
+      ],
+      "images": [
+        {
+          "name": "landing",
+          "description": "Home page"
+        },
+        {
+          "name": "great",
+          "description": "Email and phone submission form"
+        },
+        {
+          "name": "plan",
+          "description": "Available TV plans"
+        },
+        {
+          "name": "address",
+          "description": "Available addresses in DB"
+        }
+      ]
     },
-    "graphql": {
+    {
+      "no": 6,
+      "name": "Backend GraphQl",
+      "url": "graphql",
+      "participants": [
+        {
+          "rol": "developer",
+          "name": "Jesus Osorio Jimenez",
+          "linkedin": "https://www.linkedin.com/in/jesus-david-osorio-jimenez/"
+        }
+      ],
+      "technologies": {
+        "frontend": [],
+        "backend": ["graphql", "node", "express", "nodemon"],
+        "database": ["mongodb"],
+        "test": []
+      },
+      "frontend": null,
+      "backend": "https://github.com/JesusOsorioJ/GraphQlexercise",
+      "webpage": "https://graphqlexercise.up.railway.app/graphql",
+      "videopage": null,
       "description": "Backend with  usage for creating and consuming database information in mongoDB",
-      "characteristics1": "QUERIES",
-      "characteristics2": "AllUser: total search of users or by Name, LastName, IsMilitar",
-      "characteristics3": "Mandatory search by userID: UserDocumentByUser, ContactInfoByUser, allUserDocument",
-      "characteristics4": "MUTATIONS",
-      "characteristics5": "User creation: createUser",
-      "characteristics6": "Login a user: LoginUser",
-      "characteristics7": "Modify data of user: UpdateUser",
-      "images1": "Create user, grant token",
-      "images2": "All queries and mutations",
-      "images3": "Create document, enter token",
-      "images4": "Create document by username",
-      "images5": "Query allname, with email of user by return",
-      "images6": "All mutations of the program"
+      "characteristics": [
+        "QUERIES",
+        "AllUser: total search of users or by Name, LastName, IsMilitar",
+        "Mandatory search by userID: UserDocumentByUser, ContactInfoByUser, allUserDocument",
+        "MUTATIONS",
+        "User creation: createUser",
+        "Login a user: LoginUser",
+        "Modify data of user: UpdateUser"
+      ],
+      "images": [
+        {
+          "name": "createuser",
+          "description": "Create user, grant token"
+        },
+        {
+          "name": "allquerymutation",
+          "description": "All queries and mutations"
+        },
+        {
+          "name": "createdocument",
+          "description": "Create document, enter token"
+        },
+        {
+          "name": "createcontact",
+          "description": "Create document by username"
+        },
+        {
+          "name": "allname",
+          "description": "Query allname, with email of user by return"
+        },
+        {
+          "name": "allmutation",
+          "description": "All mutations of the program"
+        }
+      ]
     },
-    "dreadful": {
+    {
+      "no": 7,
+      "name": "Dreadful",
+      "url": "dreadful",
+      "participants": [
+        {
+          "rol": "developer",
+          "name": "Jesus Osorio Jimenez",
+          "linkedin": "https://www.linkedin.com/in/jesus-david-osorio-jimenez/"
+        }
+      ],
+      "technologies": {
+        "frontend": ["angular", "TS", "tailwind"],
+        "backend": [],
+        "database": [],
+        "test": []
+      },
+      "frontend": "https://github.com/JesusOsorioJ/dreadfulmovie",
+      "backend": null,
+      "webpage": "https://dreadfulmovie.vercel.app/",
+      "videopage": null,
       "description": "Project in Angular.js with login and registration page for the management and consumption of third-party API services (Platzi) and filter by product name",
-      "characteristics1": "Consumption of API information",
-      "characteristics2": "Platzi page (https://api.escuelajs.co/api/v1/products)",
-      "characteristics3": "Product pagination in lists by 8",
-      "characteristics4": "Product filter by name",
-      "images1": "Product pagination by 8 items",
-      "images2": "Page for page filter",
-      "images3": "Landing page, link for movies and series",
-      "images4": "Product filter by products",
-      "images5": "Query allname, with email of user by return",
-      "images6": "All mutations of the program"
+      "characteristics": [
+        "Consumption of API information",
+        "Platzi page (https://api.escuelajs.co/api/v1/products)",
+        "Product pagination in lists by 8",
+        "Product filter by name"
+      ],
+      "images": [
+        {
+          "name": "pagination",
+          "description": "Product pagination by 8 items"
+        },
+        {
+          "name": "filter",
+          "description": "Page for page filter"
+        },
+        {
+          "name": "landing",
+          "description": "Landing page, link for movies and series"
+        },
+        {
+          "name": "filter1",
+          "description": "Product filter by products"
+        }
+      ]
     },
-    "crudnext": {
+    {
+      "no": 8,
+      "name": "Crud Nextjs",
+      "url": "crudnext",
+      "participants": [
+        {
+          "rol": "developer",
+          "name": "Jesus Osorio Jimenez",
+          "linkedin": "https://www.linkedin.com/in/jesus-david-osorio-jimenez/"
+        }
+      ],
+      "technologies": {
+        "frontend": ["nextjs", "JS", "tailwind"],
+        "backend": [],
+        "database": ["mysql"],
+        "test": []
+      },
+      "frontend": "https://github.com/JesusOsorioJ/crudnext",
+      "backend": null,
+      "webpage": "https://crudnext-mu.vercel.app/",
+      "videopage": null,
       "description": "Frontend/backend project made in Nextjs for creation of CRUD API with fields such as projects, description, price, creation date",
-      "characteristics1": "API consumption for deleting, creating and modifying",
-      "characteristics2": "Backend for frontend information consumption",
-      "characteristics3": "Styles with tailwind",
-      "images1": "List of created products",
-      "images2": "Menu for adding new product",
-      "images3": "Menu for modify product"
+      "characteristics": [
+        "API consumption for deleting, creating and modifying",
+        "Backend for frontend information consumption",
+        "Styles with tailwind"
+      ],
+      "images": [
+        {
+          "name": "landing",
+          "description": "List of created products"
+        },
+        {
+          "name": "addnew",
+          "description": "Menu for adding new product"
+        },
+        {
+          "name": "edit",
+          "description": "Menu for modify product"
+        }
+      ]
     },
-    "igm": {
+    {
+      "no": 9,
+      "name": "Crud IGM",
+      "url": "igm",
+      "participants": [
+        {
+          "rol": "developer",
+          "name": "Jesus Osorio Jimenez",
+          "linkedin": "https://www.linkedin.com/in/jesus-david-osorio-jimenez/"
+        }
+      ],
+      "technologies": {
+        "frontend": ["vuejs", "JS", "vuex"],
+        "backend": ["laravel", "PHP"],
+        "database": ["mysql"],
+        "test": ["PHPunit"]
+      },
+      "frontend": "https://github.com/JesusOsorioJ/igmfront",
+      "backend": "https://github.com/JesusOsorioJ/igmback",
+      "webpage": "https://igmfront.vercel.app/",
+      "videopage": null,
       "description": "Vue.js (Front) and Laravel (Back) project for page creation with login, registration and notes crud with title, description, label and expiration date field",
-      "characteristics1": "Login and user creation",
-      "characteristics2": "Notes crud per logged in user",
-      "characteristics3": "Endpoint testing by PhpUnit",
-      "characteristics4": "Internalization and dark/light mode",
-      "images1": "Login and user creation",
-      "images2": "Notes crud per logged in user",
-      "images3": "Note creation per user"
+      "characteristics": [
+        "Login and user creation",
+        "Notes crud per logged in user",
+        "Endpoint testing by PhpUnit",
+        "Internalization and dark/light mode"
+      ],
+      "images": [
+        {
+          "name": "login",
+          "description": "Login and user creation"
+        },
+        {
+          "name": "table",
+          "description": "Notes crud per logged in user"
+        },
+        {
+          "name": "createnote",
+          "description": "Note creation per user"
+        }
+      ]
     },
-    "quickbet": {
+    {
+      "no": 10,
+      "name": "Quickbet movies",
+      "url": "quickbet",
+      "participants": [
+        {
+          "rol": "developer",
+          "name": "Jesus Osorio Jimenez",
+          "linkedin": "https://www.linkedin.com/in/jesus-david-osorio-jimenez/"
+        }
+      ],
+      "technologies": {
+        "frontend": ["nextjs", "JS", "zustand"],
+        "backend": ["nestjs", "bcryptjs"],
+        "database": ["postgresql"],
+        "test": []
+      },
+      "frontend": "https://github.com/JesusOsorioJ/front-tmdb",
+      "backend": "https://github.com/JesusOsorioJ/back-tmdb",
+      "webpage": "https://front-tmdb.vercel.app/",
+      "videopage": null,
       "description": "Next Js (Front) and Nestjs (Back) project with login and registration for consumption of themoviedb api for management of favorite movies by logged in user",
-      "characteristics1": "Login and user creation",
-      "characteristics2": "Mark and unmark movies as favorites",
-      "characteristics3": "Filters by name and genre",
-      "characteristics4": "Internalization and dark/light mode",
-      "characteristics5": "Api consumption from https://developer.themoviedb.org/docs/getting-started ",
-      "images1": "Login and user creation",
-      "images2": "Main page for favorites management",
-      "images3": "View movie details"
+      "characteristics": [
+        "Login and user creation",
+        "Mark and unmark movies as favorites",
+        "Filters by name and genre",
+        "Internalization and dark/light mode",
+        "Api consumption from https://developer.themoviedb.org/docs/getting-started "
+      ],
+      "images": [
+        {
+          "name": "register",
+          "description": "Login and user creation"
+        },
+        {
+          "name": "favorites",
+          "description": "Main page for favorites management"
+        },
+        {
+          "name": "details",
+          "description": "View movie details"
+        }
+      ]
     },
-    "laravelapp": {
+    {
+      "no": 11,
+      "name": "Laravel app",
+      "url": "laravelapp",
+      "participants": [
+        {
+          "rol": "developer",
+          "name": "Jesus Osorio Jimenez",
+          "linkedin": "https://www.linkedin.com/in/jesus-david-osorio-jimenez/"
+        }
+      ],
+      "technologies": {
+        "frontend": [],
+        "backend": ["laravel", "PHP", "node", "swagger"],
+        "database": ["mysql", "mongodb"],
+        "test": ["PHPunit"]
+      },
+      "frontend": "https://github.com/JesusOsorioJ/laravel-app",
+      "backend": null,
+      "webpage": null,
+      "videopage": null,
       "description": "Laravel (Back) project for user account crud and orders",
-      "characteristics1": "Crud of user accounts and orders",
-      "characteristics2": "Cascading deletion of orders by deleted user",
-      "characteristics3": "Edpoint testing by PhpUnit",
-      "characteristics4": "Documentation with Swagger and sending notification on node server by socket",
-      "images1": "Crud of user accounts",
-      "images2": "Crud of orders"
+      "characteristics": [
+        "Crud of user accounts and orders",
+        "Cascading deletion of orders by deleted user",
+        "Edpoint testing by PhpUnit",
+        "Documentation with Swagger and sending notification on node server by socket"
+      ],
+      "images": [
+        {
+          "name": "cuentas",
+          "description": "Crud of user accounts"
+        },
+        {
+          "name": "pedidos",
+          "description": "Crud of orders"
+        }
+      ]
     },
-    "nexttasksystem": {
+    {
+      "no": 12,
+      "name": "Next task system",
+      "url": "nexttasksystem",
+      "participants": [
+        {
+          "rol": "developer",
+          "name": "Jesus Osorio Jimenez",
+          "linkedin": "https://www.linkedin.com/in/jesus-david-osorio-jimenez/"
+        }
+      ],
+      "technologies": {
+        "frontend": ["nextjs", "socket"],
+        "backend": ["TS"],
+        "database": ["mysql", "prisma"],
+        "test": ["jest"]
+      },
+      "frontend": "https://github.com/JesusOsorioJ/nextjs-task-system/tree/trunk/nextjs-task-system",
+      "backend": null,
+      "webpage": null,
+      "videopage": null,
       "description": "Application designed to manage internal tasks, facilitating work organization and tracking the progress of assigned tasks. Administrators can assign and manage tasks, while employees can view and update the status of their assigned work.",
-      "characteristics1": "User registration, login, and authentication.",
-      "characteristics2": "Task creation, updating, and deletion.",
-      "characteristics3": "Real-time synchronization using WebSockets.",
-      "characteristics4": "Backend validations using express-validator.",
-      "characteristics5": "Password handling with bcrypt and authentication with JWT.",
-      "images1": "Task CRUD (frontend).",
-      "images2": "User account login and registration.",
-      "images3": "Task CRUD (REST client).",
-      "images4": "User CRUD (REST client).",
-      "images5": "Tests with Jest."
+      "characteristics": [
+        "User registration, login, and authentication",
+        "Task creation, updating, and deletion",
+        "Real-time synchronization using WebSockets",
+        "Backend validations using express-validator",
+        "Password handling with bcrypt and authentication with JWT"
+      ],
+      "images": [
+        {
+          "name": "taskfront",
+          "description": "Task CRUD (frontend)"
+        },
+        {
+          "name": "login",
+          "description": "User account login and registration"
+        },
+        {
+          "name": "task",
+          "description": "Task CRUD (REST client)"
+        },
+        {
+          "name": "user",
+          "description": "User CRUD (REST client)"
+        },
+        {
+          "name": "test",
+          "description": "Tests with Jest"
+        }
+      ]
     },
-    "evalart": {
+    {
+      "no": 13,
+      "name": "Evalart",
+      "url": "evalart",
+      "participants": [
+        {
+          "rol": "developer",
+          "name": "Jesus Osorio Jimenez",
+          "linkedin": "https://www.linkedin.com/in/jesus-david-osorio-jimenez/"
+        }
+      ],
+      "technologies": {
+        "frontend": [],
+        "backend": ["java", "maven", "swagger"],
+        "database": ["mongodb"],
+        "test": []
+      },
+      "frontend": null,
+      "backend": "https://github.com/JesusOsorioJ/evalart",
+      "webpage": null,
+      "videopage": null,
       "description": "This project is an API that manages franchises and their branches using MongoDB as the database and Spring Boot as the backend framework. It includes CRUD operations (Create, Read, Update, Delete) for handling franchises and their associated branches.",
-      "characteristics1": "Franchise management.",
-      "characteristics2": "CRUD operations for branches associated with a franchise.",
-      "characteristics3": "Data persistence with MongoDB.",
-      "characteristics4": "RESTful architecture for operations.",
-      "images1": "Project execution with mvn spring-boot:run (terminal).",
-      "images2": "Endpoint consumption with REST client (branch CRUD)."
+      "characteristics": [
+        "Franchise management.}",
+        "CRUD operations for branches associated with a franchise.}",
+        "Data persistence with MongoDB.}",
+        "RESTful architecture for operations.}"
+      ],
+      "images": [
+        {
+          "name": "terminal",
+          "description": "Project execution with mvn spring-boot:run (terminal)."
+        },
+        {
+          "name": "crud",
+          "description": "Endpoint consumption with REST client (branch CRUD)."
+        }
+      ]
     },
-    "runa": {
+    {
+      "no": 14,
+      "name": "Runa",
+      "url": "runa",
+      "participants": [
+        {
+          "rol": "developer",
+          "name": "Jesus Osorio Jimenez",
+          "linkedin": "https://www.linkedin.com/in/jesus-david-osorio-jimenez/"
+        }
+      ],
+      "technologies": {
+        "frontend": ["vite", "TS", "tailwind"],
+        "backend": ["JS", "node", "docker"],
+        "database": ["postgresql"],
+        "test": []
+      },
+      "frontend": "https://github.com/JesusOsorioJ/runa",
+      "backend": "https://github.com/JesusOsorioJ/runa",
+      "webpage": null,
+      "videopage": null,
       "description": "Application that securely receives and processes cryptocurrency transactions.",
-      "characteristics1": "Verification of cryptocurrency transactions.",
-      "characteristics2": "Validations to prevent duplicate transactions and wallet conflicts.",
-      "characteristics3": "Docker-based architecture for easier deployment and management.",
-      "characteristics4": "Layout built with Vite + React + Tailwind.",
-      "images1": "Docker container creation and app.js execution (terminal).",
-      "images2": "Docker container creation and app.js execution (Docker).",
-      "images3": "Layout with Vite + React + Tailwind."
+      "characteristics": [
+        "Verification of cryptocurrency transactions",
+        "Validations to prevent duplicate transactions and wallet conflicts",
+        "Docker-based architecture for easier deployment and management",
+        "Layout built with Vite + React + Tailwind"
+      ],
+      "images": [
+        {
+          "name": "terminal",
+          "description": "Docker container creation and app.js execution (terminal)"
+        },
+        {
+          "name": "docker",
+          "description": "Docker container creation and app.js execution (Docker)"
+        },
+        {
+          "name": "maquetacion",
+          "description": "Layout with Vite + React + Tailwind"
+        }
+      ]
     },
-    "pocket": {
+    {
+      "no": 15,
+      "name": "Pocket",
+      "url": "pocket",
+      "participants": [
+        {
+          "rol": "developer",
+          "name": "Jesus Osorio Jimenez",
+          "linkedin": "https://www.linkedin.com/in/jesus-david-osorio-jimenez/"
+        }
+      ],
+      "technologies": {
+        "frontend": ["react", "TS", "tailwind", "i18next", "socket"],
+        "backend": ["node", "express", "swagger"],
+        "database": ["prisma"],
+        "test": []
+      },
+      "frontend": "https://github.com/JesusOsorioJ/pocket",
+      "backend": "https://github.com/JesusOsorioJ/pocket",
+      "webpage": "https://pocket-indol.vercel.app/",
+      "videopage": null,
       "description": "This project is an interactive chat application developed with React, TypeScript, and Socket.IO. It provides chat functionality between users and a bot, integrated with a backend built with Node.js and Express.",
-      "characteristics1": "Chatbot API (AI) consumption for user responses.",
-      "characteristics2": "Handling of internationalization and light/dark themes.",
-      "characteristics3": "Real-time synchronization using WebSockets.",
-      "images1": "Interactive chatbot (AI) chat.",
-      "images2": "Delete chat.",
-      "images3": "Internationalization handling and light/dark themes."
+      "characteristics": [
+        "Chatbot API (AI) consumption for user responses",
+        "Handling of internationalization and light/dark themes",
+        "Real-time synchronization using WebSockets"
+      ],
+      "images": [
+        {
+          "name": "chatbot",
+          "description": "Interactive chatbot (AI) chat"
+        },
+        {
+          "name": "eliminar",
+          "description": "Delete chat"
+        },
+        {
+          "name": "temas",
+          "description": "Internationalization handling and light/dark themes"
+        }
+      ]
     },
-    "portfolio": {
+    {
+      "no": 16,
+      "name": "Portafolio",
+      "url": "portfolio",
+      "participants": [
+        {
+          "rol": "developer",
+          "name": "Jesus Osorio Jimenez",
+          "linkedin": "https://www.linkedin.com/in/jesus-david-osorio-jimenez/"
+        }
+      ],
+      "technologies": {
+        "frontend": ["angular", "swiper", "i18next", "TS", "tailwind", "gsap"],
+        "backend": [],
+        "database": [],
+        "test": []
+      },
+      "frontend": "https://github.com/JesusOsorioJ/portfolio",
+      "backend": null,
+      "webpage": "https://jesusosorio1.vercel.app/",
+      "videopage": null,
       "description": "Application to showcase portfolio, academic studies, and personal projects. First version.",
-      "characteristics1": "General information view.",
-      "characteristics2": "Experience and studies view.",
-      "characteristics3": "Project detail view, carousel implementation.",
-      "images1": "Landing page.",
-      "images2": "Image of created projects view.",
-      "images3": "Project detail view, tools, and features.",
-      "images4": "Dark/light theme and internationalization.",
-      "images5": "Responsive design."
+      "characteristics": [
+        "General information view",
+        "Experience and studies view",
+        "Project detail view, carousel implementation"
+      ],
+      "images": [
+        {
+          "name": "landing",
+          "description": "Landing page."
+        },
+        {
+          "name": "proyectos",
+          "description": "Image of created projects view."
+        },
+        {
+          "name": "detalleProyecto",
+          "description": "Project detail view, tools, and features."
+        },
+        {
+          "name": "temasOscuroClaro",
+          "description": "Dark/light theme and internationalization."
+        },
+        {
+          "name": "responsive",
+          "description": "Responsive design."
+        }
+      ]
     },
-    "mgpanel": {
+    {
+      "no": 17,
+      "name": "Mg panel",
+      "url": "mgpanel",
+      "participants": [
+        {
+          "rol": "developer",
+          "name": "Jesus Osorio Jimenez",
+          "linkedin": "https://www.linkedin.com/in/jesus-david-osorio-jimenez/"
+        }
+      ],
+      "technologies": {
+        "frontend": ["vite", "TS", "tailwind", "i18next"],
+        "backend": [],
+        "database": [],
+        "test": []
+      },
+      "frontend": "https://github.com/JesusOsorioJ/intentoHtml",
+      "backend": null,
+      "webpage": "https://intento-html.vercel.app/",
+      "videopage": null,
       "description": "Web page layout.",
-      "characteristics1": "General information view.",
-      "characteristics2": "Theme configuration and internationalization.",
-      "images1": "Landing page.",
-      "images2": "Image of created projects view (swiper).",
-      "images3": "Dark/light theme, internationalization, and responsive design."
+      "characteristics": [
+        "General information view",
+        "Theme configuration and internationalization"
+      ],
+      "images": [
+        {
+          "name": "landing",
+          "description": "Landing page."
+        },
+        {
+          "name": "swiper",
+          "description": "Image of created projects view (swiper)."
+        },
+        {
+          "name": "themes",
+          "description": "Dark/light theme, internationalization, and responsive design."
+        }
+      ]
     }
-  }
+  ]
 }

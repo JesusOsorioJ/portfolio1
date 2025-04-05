@@ -7,7 +7,15 @@ import "swiper/css/pagination";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Email, Github, Linkedin, NextIcon, Phone, PrevIcon, ToolSvg } from "./Icons";
+import {
+  Email,
+  Github,
+  Linkedin,
+  NextIcon,
+  Phone,
+  PrevIcon,
+  ToolSvg,
+} from "./Icons";
 
 import { useTranslation } from "react-i18next";
 import { generateRandomString, technologies } from "./utils";
@@ -21,7 +29,7 @@ export const Menu = ({
   contacto,
   isOpen,
   setIsOpen,
-  delayOscuro = 1000
+  delayOscuro = 1000,
 }) => {
   const navigate = new useNavigate();
   const { t, i18n } = useTranslation();
@@ -185,17 +193,19 @@ export const Menu = ({
 
 export const Carrusel = ({filteredData}) => {
   const { t } = useTranslation();
-  
   return (
     <div className="w-full flex flex-col items-center">
-      
       <Swiper
         navigation
         pagination={{ clickable: true }}
         loop={true}
         modules={[Navigation, Pagination, Autoplay]}
         className="mySwiper w-[90vw]"
-        autoplay={{ delay: 2000, disableOnInteraction: false,  pauseOnMouseEnter: true  }} 
+        autoplay={{
+          delay: 2000,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true,
+        }}
         breakpoints={{
           320: { slidesPerView: 1, spaceBetween: 10 },
           800: { slidesPerView: 2, spaceBetween: 20 },
@@ -236,17 +246,15 @@ export const Carrusel = ({filteredData}) => {
   );
 };
 
-export const BuscarPorPaginacion = ({filteredData }) => {
+export const BuscarPorPaginacion = ({ filteredData }) => {
   const { t } = useTranslation();
   const [currentPage, setCurrentPage] = useState(1);
 
-
   const itemsPerPage = 4;
-    const indexOfLastItem = currentPage * itemsPerPage;
+  const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = filteredData.slice(indexOfFirstItem, indexOfLastItem);
-  const totalPage = Math.ceil(filteredData.length / itemsPerPage)
- 
+  const totalPage = Math.ceil(filteredData.length / itemsPerPage);
 
   return (
     <div className="w-full flex flex-col items-center gap-2">
@@ -362,94 +370,96 @@ export const Footer = ({
   const { t } = useTranslation();
 
   return (
-    <footer className="flex flex-col gap-[40px] bg-[#1e2939d6] text-white 
-    p-[50px] lg:p-[80px]">
-          <p className="text-[#E9D8A6] text-[22px] uppercase">{t("links")}</p>
-          <div className="flex flex-col items-start gap-[10px] text-[18px]">
-            <button
-              onClick={() => {
-                navigate("/");
-                inicio.current?.scrollIntoView({ behavior: "smooth" });
-              }}
-              className="hover:text-[#E9D8A6]"
-            >
-              {t("home")}
-            </button>
+    <footer
+      className="flex flex-col gap-[40px] bg-[#1e2939d6]
+       text-white p-[50px] lg:p-[80px]"
+    >
+      <p className="text-[#E9D8A6] text-[22px] uppercase">{t("links")}</p>
+      <div className="flex flex-col items-start gap-[10px] text-[18px]">
+        <button
+          onClick={() => {
+            navigate("/");
+            inicio.current?.scrollIntoView({ behavior: "smooth" });
+          }}
+          className="hover:text-[#E9D8A6]"
+        >
+          {t("home")}
+        </button>
 
-            <button
-              onClick={() => {
-                navigate("/");
-                experiencia.current?.scrollIntoView({ behavior: "smooth" });
-              }}
-              className="hover:text-[#E9D8A6]"
-            >
-              {t("workExperience")}
-            </button>
-            <button
-              onClick={() => {
-                navigate("/");
-                herramientas.current?.scrollIntoView({ behavior: "smooth" });
-              }}
-              className="hover:text-[#E9D8A6]"
-            >
-              {t("tools")}
-            </button>
-            <button
-              onClick={() => {
-                navigate("/");
-                estudios.current?.scrollIntoView({ behavior: "smooth" });
-              }}
-              className="hover:text-[#E9D8A6]"
-            >
-              {t("academicTraining")}
-            </button>
-            <button
-              onClick={() => {
-                navigate("/about");
-                proyectos.current?.scrollIntoView({ behavior: "smooth" });
-              }}
-              className="hover:text-[#E9D8A6]"
-            >
-              {t("myProjects")}
-            </button>
-          </div>
-          <div className="flex gap-4 items-center">
-            <a
-              className="hover:text-[#E9D8A6] duration-300"
-              href="https://www.linkedin.com/in/jesus-david-osorio-jimenez/"
-              target="_blank"
-            >
-              <Linkedin />
-            </a>
-            <a
-              className="hover:text-[#E9D8A6] duration-300"
-              href="https://github.com/JesusOsorioJ"
-              target="_blank"
-            >
-              <Github />
-            </a>
-            <a
-              className="hover:text-[#E9D8A6] duration-300"
-              href="mailto:jesusosoriojimenez@outlook.com"
-            >
-              <Email />
-            </a>
-            <a
-              className="hover:text-[#E9D8A6] duration-300"
-              href="https://wa.me/573174526421"
-            >
-              <Phone />
-            </a>
-          </div>
+        <button
+          onClick={() => {
+            navigate("/");
+            experiencia.current?.scrollIntoView({ behavior: "smooth" });
+          }}
+          className="hover:text-[#E9D8A6]"
+        >
+          {t("workExperience")}
+        </button>
+        <button
+          onClick={() => {
+            navigate("/");
+            herramientas.current?.scrollIntoView({ behavior: "smooth" });
+          }}
+          className="hover:text-[#E9D8A6]"
+        >
+          {t("tools")}
+        </button>
+        <button
+          onClick={() => {
+            navigate("/");
+            estudios.current?.scrollIntoView({ behavior: "smooth" });
+          }}
+          className="hover:text-[#E9D8A6]"
+        >
+          {t("academicTraining")}
+        </button>
+        <button
+          onClick={() => {
+            navigate("/about");
+            proyectos.current?.scrollIntoView({ behavior: "smooth" });
+          }}
+          className="hover:text-[#E9D8A6]"
+        >
+          {t("myProjects")}
+        </button>
+      </div>
+      <div className="flex gap-4 items-center">
+        <a
+          className="hover:text-[#E9D8A6] duration-300"
+          href="https://www.linkedin.com/in/jesus-david-osorio-jimenez/"
+          target="_blank"
+        >
+          <Linkedin />
+        </a>
+        <a
+          className="hover:text-[#E9D8A6] duration-300"
+          href="https://github.com/JesusOsorioJ"
+          target="_blank"
+        >
+          <Github />
+        </a>
+        <a
+          className="hover:text-[#E9D8A6] duration-300"
+          href="mailto:jesusosoriojimenez@outlook.com"
+        >
+          <Email />
+        </a>
+        <a
+          className="hover:text-[#E9D8A6] duration-300"
+          href="https://wa.me/573174526421"
+        >
+          <Phone />
+        </a>
+      </div>
     </footer>
   );
 };
 
 export const EfectoAparecer = ({
   children,
-  translate="translate-y-full",
+  translate = "translate-y-full",
   delay = 0,
-  className = ""
+  className = "",
 }) => {
   const idRandom = generateRandomString(20);
   const containerRef = useRef(null);
@@ -480,16 +490,14 @@ export const EfectoAparecer = ({
   }, []);
 
   return (
-    <div ref={containerRef} className={`relative inline-block overflow-hidden ${className}`}>
-      <div
-        id={idRandom}
-        className={`${translate} duration-1000 ease-in-out`}
-      >
+    <div
+      ref={containerRef}
+      className={`relative inline-block overflow-hidden ${className}`}
+    >
+      <div id={idRandom} className={`${translate} duration-1000 ease-in-out`}>
         {children}
       </div>
     </div>
-
-
   );
 };
 
@@ -546,7 +554,13 @@ export const EfectoTexto = ({
   );
 };
 
-export const EfectoIconos = ({ data, delay = 0, quitarTexto, svgSize, classAdd }) => {
+export const EfectoIconos = ({
+  data,
+  delay = 0,
+  quitarTexto,
+  svgSize,
+  classAdd,
+}) => {
   const containerRef = useRef(null);
   const idRandom = generateRandomString(20);
 
@@ -565,10 +579,10 @@ export const EfectoIconos = ({ data, delay = 0, quitarTexto, svgSize, classAdd }
                 image.classList.replace("scale-0", "scale-100");
               }, index * 100 + delay);
 
-            if (quitarTexto)
-              setTimeout(() => {
-                image.classList.add("text-transparent");
-              }, index * -100 + delay + 3000);
+              if (quitarTexto)
+                setTimeout(() => {
+                  image.classList.add("text-transparent");
+                }, index * -100 + delay + 3000);
             }
           });
           observer.unobserve(element);
@@ -623,18 +637,17 @@ export function EfectoPrincipal() {
     setTimeout(() => parte2.classList.remove("hidden"), 600);
     const parte3 = document.getElementById("parte3");
     setTimeout(() => parte3.classList.remove("hidden"), 700);
-    
+
     const updateViewBox = () => {
       const width = window.innerWidth;
       const height = window.innerHeight;
       setViewBox(`0 0 ${width} ${height}`);
-      setTranslate(`translate(${(width-232)/2}, ${(height-232)/2})`);
+      setTranslate(`translate(${(width - 232) / 2}, ${(height - 232) / 2})`);
     };
 
     updateViewBox();
     window.addEventListener("resize", updateViewBox);
     return () => window.removeEventListener("resize", updateViewBox);
-  
   }, []);
 
   return (
@@ -681,7 +694,7 @@ export function EfectoPrincipal() {
                   c0.713,0,1.438-0.192,2.09-0.592l39.096-24.016c1.184-0.727,1.906-2.018,1.906-3.408c0-1.39-0.723-2.68-1.906-3.408
                   l-39.096-24.018c-1.885-1.158-4.346-0.57-5.502,1.314C140.34,105.77,140.928,108.233,142.81,109.389z"
               />
-          </g>
+            </g>
           </mask>
         </defs>
         <rect width="100%" height="100%" fill="black" mask="url(#textMask)" />
@@ -768,16 +781,15 @@ function SunMoonToggle() {
     }
   }, [darkMode]);
 
-
   return (
     <div className="flex justify-center items-center">
       <motion.div
         className="w-8 h-8 cursor-pointer"
         onClick={() => setDarkMode(!darkMode)}
-        animate={{ rotate: darkMode  ? 360 : 0 }}
+        animate={{ rotate: darkMode ? 360 : 0 }}
         transition={{ duration: 0.5, ease: "easeInOut" }}
       >
-        {darkMode  ? (
+        {darkMode ? (
           <motion.svg
             key="moon"
             initial={{ opacity: 0, scale: 0.5 }}
@@ -820,14 +832,19 @@ function SunMoonToggle() {
 export const Herramientas = ({data=technologies, quitarTexto=true,  svgSize="50px", classAdd=""  }) => {
   return (
     <div className="flex flex-col w-full gap-4">
-       {Object.keys(data).map((d) => (
+      {Object.keys(data).map((d) => (
         <div className="flex flex-col items-start" key={d}>
-          {data[d].length != 0 && <p className="pr-1 mb-0 text-lg uppercase">{d}</p>}
-          <EfectoIconos data={data[d]} quitarTexto={quitarTexto} svgSize={svgSize} classAdd={classAdd} />
+          {data[d].length != 0 && (
+            <p className="pr-1 mb-0 text-lg uppercase">{d}</p>
+          )}
+          <EfectoIconos
+            data={data[d]}
+            quitarTexto={quitarTexto}
+            svgSize={svgSize}
+            classAdd={classAdd}
+          />
         </div>
       ))}
     </div>
   );
 };
-
-
