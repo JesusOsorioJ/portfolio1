@@ -11,7 +11,7 @@ import {
   Herramientas,
   Menu,
 } from "../components/MyComponent";
-import { projects } from "../components/utils";
+import data from "../assets/locales/en.json";
 
 export default function Home({
   inicio,
@@ -98,16 +98,7 @@ export default function Home({
             </button>
           </div>
           <div className="flex flex-col w-full gap-10">
-            {[
-              {
-                responsibilities: 3,
-                achievements: 6,
-              },
-              {
-                responsibilities: 3,
-                achievements: 2,
-              },
-            ].map((d, i) => (
+            {data.experience.map((d, i) => (
               <div key={i}>
                 <EfectoTexto
                   classAdd="font-bold uppercase"
@@ -121,10 +112,10 @@ export default function Home({
                 <EfectoAparecer>
                   <ul>
                     <li className="font-bold">{t("responsibilities")}:</li>
-                    {Array.from({ length: d.responsibilities }, (_, j) => (
+                    {d.responsibilities.map((_, j) => (
                       <div key={j} className="flex">
                         <p className="px-2">•</p>
-                        <p>{t(`experience.${i}.responsibilities${j + 1}`)}</p>
+                        <p>{t(`experience.${i}.responsibilities.${j}`)}</p>
                       </div>
                     ))}
                   </ul>
@@ -132,10 +123,10 @@ export default function Home({
                 <EfectoAparecer>
                   <ul>
                     <li className="font-bold">{t("importantAchievements")}:</li>
-                    {Array.from({ length: d.achievements }, (_, j) => (
+                    {d.achievements.map((_, j) => (
                       <div key={j} className="flex">
                         <p className="px-2">•</p>
-                        <p>{t(`experience.${i}.achievements${j + 1}`)}</p>
+                        <p>{t(`experience.${i}.achievements.${j}`)}</p>
                       </div>
                     ))}
                   </ul>
@@ -190,8 +181,8 @@ export default function Home({
 
           <div className="flex flex-col gap-10 justify-center">
             <div className="flex flex-col gap-4 item-center w-full">
-              {Array.from({ length: 3 }, (_, i) => (
-                <EfectoAparecer delay={100*(i+1)} key={i}>
+              {data.academy.map((_, i) => (
+                <EfectoAparecer delay={100 * (i + 1)} key={i}>
                   <div className="text-lg font-bold">
                     {t(`academy.${i}.title`)}
                   </div>
@@ -216,63 +207,63 @@ export default function Home({
             {t("coursesCertifications")}
           </p>
         </EfectoAparecer>
-          <div className="flex flex-col gap-10 justify-center">
-            <div className="flex flex-col gap-4 item-center w-full">
-              {Array.from({ length: 2}, (_, i) => (
-                <EfectoAparecer delay={100*(i+1)} key={i}>
-                  <div className="text-lg font-bold">
-                    {t(`courses.${i}.title`)}
-                  </div>
-                  <div className="text-[#E9D8A6]">
-                    {t(`courses.${i}.university`)}
-                  </div>
-                  <div>{t(`courses.${i}.time`)}</div>
-                  <div>{t(`courses.${i}.description`)}</div>
-                </EfectoAparecer>
-              ))}
-            </div>
+        <div className="flex flex-col gap-10 justify-center">
+          <div className="flex flex-col gap-4 item-center w-full">
+            {Array.from({ length: 2 }, (_, i) => (
+              <EfectoAparecer delay={100 * (i + 1)} key={i}>
+                <div className="text-lg font-bold">
+                  {t(`courses.${i}.title`)}
+                </div>
+                <div className="text-[#E9D8A6]">
+                  {t(`courses.${i}.university`)}
+                </div>
+                <div>{t(`courses.${i}.time`)}</div>
+                <div>{t(`courses.${i}.description`)}</div>
+              </EfectoAparecer>
+            ))}
+          </div>
 
-            <EfectoAparecer>
-              <div className="flex flex-wrap gap-5 w-full justify-center ">
-                <button
-                  onClick={() =>
-                    proyectos.current?.scrollIntoView({ behavior: "smooth" })
+          <EfectoAparecer>
+            <div className="flex flex-wrap gap-5 w-full justify-center ">
+              <button
+                onClick={() =>
+                  proyectos.current?.scrollIntoView({ behavior: "smooth" })
+                }
+                className="text-[18px] group border h-[40px] relative flex 
+                  items-center justify-center overflow-y-hidden px-10"
+              >
+                <div className="z-10 text-[#ffffff] group-hover:text-[#000000] duration-500 ease-in-out uppercase">
+                  {t("continue")}
+                </div>
+                <div
+                  className={`absolute top-0 h-[40px] w-full translate-y-full group-hover:translate-y-0 duration-500 ease-in-out bg-[#ffffff]`}
+                />
+              </button>
+              <button
+                onClick={() => {
+                  const link = document.createElement("a");
+                  const value = "es";
+
+                  if (value == "en") {
+                    link.href = "/assets/cv/CV_EN.pdf";
+                  } else {
+                    link.href = "/assets/cv/CV_ES.pdf";
                   }
-                  className="text-[18px] group border h-[40px] relative flex 
+                  link.download = "CV.pdf";
+                  link.click();
+                }}
+                className="text-[18px] group border h-[40px] relative flex 
                   items-center justify-center overflow-y-hidden px-10"
-                >
-                  <div className="z-10 text-[#ffffff] group-hover:text-[#000000] duration-500 ease-in-out uppercase">
-                    {t("continue")}
-                  </div>
-                  <div
-                    className={`absolute top-0 h-[40px] w-full translate-y-full group-hover:translate-y-0 duration-500 ease-in-out bg-[#ffffff]`}
-                  />
-                </button>
-                <button
-                  onClick={() => {
-                    const link = document.createElement("a");
-                    const value = "es";
-
-                    if (value == "en") {
-                      link.href = "/assets/cv/CV_EN.pdf";
-                    } else {
-                      link.href = "/assets/cv/CV_ES.pdf";
-                    }
-                    link.download = "CV.pdf";
-                    link.click();
-                  }}
-                  className="text-[18px] group border h-[40px] relative flex 
-                  items-center justify-center overflow-y-hidden px-10"
-                >
-                  <div className="z-10 text-[#ffffff] group-hover:text-[#000000] duration-500 ease-in-out uppercase">
-                    {t("downloadResumeSpanish")}
-                  </div>
-                  <div
-                    className={`absolute top-0 h-[40px] w-full translate-y-full group-hover:translate-y-0 duration-500 ease-in-out bg-[#ffffff]`}
-                  />
-                </button>
-              </div>
-            </EfectoAparecer>
+              >
+                <div className="z-10 text-[#ffffff] group-hover:text-[#000000] duration-500 ease-in-out uppercase">
+                  {t("downloadResumeSpanish")}
+                </div>
+                <div
+                  className={`absolute top-0 h-[40px] w-full translate-y-full group-hover:translate-y-0 duration-500 ease-in-out bg-[#ffffff]`}
+                />
+              </button>
+            </div>
+          </EfectoAparecer>
         </div>
       </section>
 
@@ -292,11 +283,11 @@ export default function Home({
 export const SeccionBuscador = ({ proyectos, contacto, buscador = false }) => {
   const { t } = useTranslation();
   const [search, setSearch] = useState("");
-  const [filteredData, setFilteredData] = useState(projects);
+  const [filteredData, setFilteredData] = useState(data.projects);
 
   useEffect(() => {
     setFilteredData(
-      projects.filter(
+      data.projects.filter(
         (d) =>
           d.name.toLowerCase().includes(search.toLowerCase()) ||
           d.technologies.frontend.some((tech) =>
@@ -313,7 +304,7 @@ export const SeccionBuscador = ({ proyectos, contacto, buscador = false }) => {
           )
       )
     );
-  }, [search, projects]);
+  }, [search]);
 
   return (
     <section
