@@ -8,7 +8,7 @@ import {
   Menu,
 } from "../components/MyComponent";
 import { useParams } from "react-router-dom";
-import { projects } from "../components/utils";
+import data from "../assets/locales/en.json";
 import { useTranslation } from "react-i18next";
 import { SeccionBuscador } from "./Home";
 import { ToolSvg } from "../components/Icons";
@@ -25,14 +25,15 @@ export default function Details({
 }) {
   const { t } = useTranslation();
   const { url } = useParams();
-  const project = projects.filter((d) => url == d.url)[0];
+  const index = data.projects.findIndex((d) => url === d.url);
+  const project = index !== -1 ? data.projects[index] : null;
 
   useEffect(() => {
     inicio.current?.scrollIntoView({ behavior: "smooth" });
   }, []);
 
   return (
-    <div className="text-white text-[16px] text-justify">
+    <div className="text-white text-[16px]">
       <Menu
         inicio={inicio}
         experiencia={experiencia}
@@ -48,15 +49,16 @@ export default function Details({
       <section
         ref={inicio}
         id="inicio"
-        className="flex flex-col gap-5 items-center py-30 px-5 md:px-30 min-h-screen w-full">
+        className="flex flex-col gap-5 items-center py-30 px-5 md:px-30 min-h-screen w-ful"
+      >
         <EfectoAparecer delay={1000}>
           <p className="text-[50px] uppercase w-fit">{project.name}</p>
         </EfectoAparecer>
         <div className="flex flex-col lg:flex-row-reverse gap-15 w-full">
-          <div className="flex flex-col gap-10">
+          <div className="flex flex-col gap-6 ">
             <EfectoAparecer delay={1200}>
-              <CarruselDetails data={project} />
-              <div className="flex flex-wrap w-full gap-4">
+              <CarruselDetails project={project} />
+              <div className="flex flex-wrap w-full gap-4 pt-6">
                 {project.webpage && (
                   <ButtonLink text="webPage" href={project.webpage} />
                 )}
@@ -83,8 +85,8 @@ export default function Details({
           <div className="flex flex-col gap-3">
             <EfectoTexto
               textSize="16px"
-              classAdd="max-w-[800px]"
-              data={t(`projects.${url}.description`)}
+              classAdd="max-w-[800px] text-justify"
+              data={t(`projects.${index}.description`)}
             />
             <EfectoAparecer delay={3000}>
               <p className="text-base font-bold text-[#E9D8A6]">
@@ -101,27 +103,32 @@ export default function Details({
                 </a>
               ))}
 
-              {project.responsibilities != 0 && (
-                <div className="mt-4">
-                  <p className="text-base font-bold text-[#E9D8A6]">
-                    {t("responsibilities")}
-                  </p>
-                  <ul role="list" className="list-disc space-y-2 pl-4">
-                    {Array.from({ length: project.responsibilities },(_, i) => (
-                      <li key={i}>{t(`projects.${url}.responsibilities${i + 1}`)}</li>
-                    ))}
-                  </ul>
-                </div>
-              )}
+              {project.responsibilities &&
+                project.responsibilities.length != 0 && (
+                  <div className="mt-4">
+                    <p className="text-base font-bold text-[#E9D8A6]">
+                      {t("responsibilities")}
+                    </p>
+                    <ul role="list" className="list-disc space-y-2 pl-4">
+                      {project.responsibilities.map((_, i) => (
+                        <li key={i}>
+                          {t(`projects.${index}.responsibilities.${i}`)}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
 
-              {project.characteristics != 0 && (
+              {project.characteristics.length != 0 && (
                 <div className="mt-4">
                   <p className="text-base font-bold text-[#E9D8A6]">
                     {t("characteristics")}
                   </p>
                   <ul role="list" className="list-disc space-y-2 pl-4">
-                    {Array.from({ length: project.characteristics },(_, i) => (
-                      <li key={i}>{t(`projects.${url}.characteristics${i + 1}`)}</li>
+                    {project.characteristics.map((_, i) => (
+                      <li key={i}>
+                        {t(`projects.${index}.characteristics.${i}`)}
+                      </li>
                     ))}
                   </ul>
                 </div>

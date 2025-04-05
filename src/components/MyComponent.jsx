@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import {
@@ -68,7 +68,14 @@ export const Menu = ({
         </button>
       </div>
 
-      <div onClick={() => {setIsOpen(false);}} className={`fixed top-0 h-screen w-screen z-[100] ${!isOpen && "-translate-x-full"}`}/>
+      <div
+        onClick={() => {
+          setIsOpen(false);
+        }}
+        className={`fixed top-0 h-screen w-screen z-[100] ${
+          !isOpen && "-translate-x-full"
+        }`}
+      />
 
       <div
         className={`z-[100] backdrop-blur-[2px] fixed top-0 duration-300 flex flex-col h-screen justify-between bg-[#00121981]  px-[70px] py-[50px] pr-[120px] ${
@@ -123,7 +130,7 @@ export const Menu = ({
               <button
                 onClick={() => {
                   navigate("/");
-                   estudios.current?.scrollIntoView({ behavior: "smooth" });
+                  estudios.current?.scrollIntoView({ behavior: "smooth" });
                   setIsOpen(false);
                 }}
                 className="group-hover:text-[#E9D8A6] duration-300 ease-in-out uppercase"
@@ -196,10 +203,9 @@ export const Carrusel = ({filteredData}) => {
   return (
     <div className="w-full flex flex-col items-center">
       <Swiper
-        navigation
         pagination={{ clickable: true }}
         loop={true}
-        modules={[Navigation, Pagination, Autoplay]}
+        modules={[Autoplay]}
         className="mySwiper w-[90vw]"
         autoplay={{
           delay: 2000,
@@ -207,31 +213,31 @@ export const Carrusel = ({filteredData}) => {
           pauseOnMouseEnter: true,
         }}
         breakpoints={{
-          320: { slidesPerView: 1, spaceBetween: 10 },
-          800: { slidesPerView: 2, spaceBetween: 20 },
-          1500: { slidesPerView: 3, spaceBetween: 30 },
+          320: { slidesPerView: 1.2},
+          800: { slidesPerView: 2.2},
+          1500: { slidesPerView: 3.2},
         }}
       >
         {filteredData.map((d, i) => (
           <SwiperSlide key={i}>
             <a
               href={`/details/${d.url}`}
-              className="flex flex-col gap-1 duration-500"
+              className="flex flex-col duration-500"
             >
               <div className="relative w-full group overflow-hidden">
                 <img
-                  src={`/assets/photo/${d.url}/${d.imageswebpages[0]}.png`}
+                  src={`/assets/photo/${d.url}/${d.images[0].name}.png`}
                   className="w-full h-[400px] bg-cover"
-                  alt={d.imageswebpages[0]}
+                  alt={d.images[0].name}
                 />
-                <div className="text-[18px] bg-[#000000cb] size-full absolute top-0 translate-y-full group-hover:translate-y-0 duration-500 p-10">
-                  <p>{t(`projects.${d.url}.description`)}</p>
+                <div className="bg-[#000000cb] size-full absolute top-0 translate-y-full group-hover:translate-y-0 duration-1000 ease-in-out p-10">
+                  <p>{t(`projects.${d.no}.description`)}</p>
                 </div>
               </div>
 
-              <div className="z-10 pb-10">
-                <p className="text-[18px] font-[600] uppercase">{d.name}</p>
-                <div className="flex flex-wrap gap-2 text-[16px] capitalize">
+              <div className="z-10 py-2">
+                <p className="text-[18px] uppercase">{d.name}</p>
+                <div className="flex flex-wrap gap-2 capitalize text-[#808080]">
                   <p>{d.technologies.frontend[0]}</p>
                   <p>{d.technologies.backend[0]}</p>
                   <p>{d.technologies.database[0]}</p>
@@ -258,30 +264,30 @@ export const BuscarPorPaginacion = ({ filteredData }) => {
 
   return (
     <div className="w-full flex flex-col items-center gap-2">
-      
-
-   {/* Paginación */}
-   {filteredData.length != 0 && <div className="flex gap-2 mt-4 items-center">
-        <button
-          className="p-2 text-2xl hover:text-[#E9D8A6] disabled:opacity-50"
-          onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
-          disabled={currentPage === 1}
-        >
-          <PrevIcon />
-        </button>
-        <span className="p-2">{t("page")} {currentPage}/{totalPage}</span>
-        <button
-          className="p-2 text-2xl hover:text-[#E9D8A6] disabled:opacity-50"
-          onClick={() =>
-            setCurrentPage((prev) =>
-              prev < totalPage ? prev + 1 : prev
-            )
-          }
-          disabled={indexOfLastItem >= filteredData.length}
-        >
-          <NextIcon />
-        </button>
-      </div>}
+      {/* Paginación */}
+      {filteredData.length != 0 && (
+        <div className="flex gap-2 mt-4 items-center">
+          <button
+            className="p-2 text-2xl hover:text-[#E9D8A6] disabled:opacity-50"
+            onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
+            disabled={currentPage === 1}
+          >
+            <PrevIcon />
+          </button>
+          <span className="p-2">
+            {t("page")} {currentPage}/{totalPage}  Total: {filteredData.length}
+          </span>
+          <button
+            className="p-2 text-2xl hover:text-[#E9D8A6] disabled:opacity-50"
+            onClick={() =>
+              setCurrentPage((prev) => (prev < totalPage ? prev + 1 : prev))
+            }
+            disabled={indexOfLastItem >= filteredData.length}
+          >
+            <NextIcon />
+          </button>
+        </div>
+      )}
       <div className="flex flex-wrap gap-3 justify-center">
         {currentItems.map((d, i) => (
           <a
@@ -291,17 +297,17 @@ export const BuscarPorPaginacion = ({ filteredData }) => {
           >
             <div className="relative w-full group overflow-hidden">
               <img
-                src={`/assets/photo/${d.url}/${d.imageswebpages[0]}.png`}
+                src={`/assets/photo/${d.url}/${d.images[0].name}.png`}
                 className="h-[300px] w-[450px] bg-cover"
-                alt={d.imageswebpages[0]}
+                alt={d.images[0].name}
               />
-              <div className="text-[18px] bg-[#000000cb] size-full absolute top-0 translate-y-full group-hover:translate-y-0 duration-500 p-10">
-                <p>{t(`projects.${d.url}.description`)}</p>
+              <div className="bg-[#000000cb] size-full absolute top-0 translate-y-full group-hover:translate-y-0 duration-1000 ease-in-out p-10">
+                <p>{t(`projects.${d.no}.description`)}</p>
               </div>
             </div>
-            <div className="z-10 pb-10">
-              <p className="text-[18px] font-[600] uppercase">{d.name}</p>
-              <div className="flex flex-wrap gap-2 text-[16px] capitalize">
+            <div className="z-10 py-2">
+              <p className="text-[18px] uppercase">{d.name}</p>
+              <div className="flex flex-wrap gap-2 capitalize text-[#808080]">
                 <p>{d.technologies.frontend[0]}</p>
                 <p>{d.technologies.backend[0]}</p>
                 <p>{d.technologies.database[0]}</p>
@@ -315,47 +321,65 @@ export const BuscarPorPaginacion = ({ filteredData }) => {
   );
 };
 
-export const CarruselDetails = ({ data }) => {
-  const { t } = useTranslation();
-
+export const CarruselDetails = ({ project }) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div
-      className={`duration-400 ${isOpen ? "fixed top-0 right-0 w-[100vw] h-[100vh] p-10 lg:p-30 z-80" : "w-[90vw] lg:w-[35vw]"}`}
-    >
+    <div>
       <div
-        onClick={() => setIsOpen(false)}
-        className={`${
-          isOpen ? "absolute top-0 left-0 bg-[#00000081] size-full" : "hidden"
-        }`}
-      />
-      <Swiper
-        navigation
-        pagination={{ clickable: true }}
-        // autoplay={{ delay: 2000 }}
-        loop={true}
-        modules={[Navigation, Pagination, Autoplay]}
-        className="mySwiper h-full"
+        className={`duration-1000 fixed top-0 right-0 z-80 ease-in-out
+          ${isOpen ? "w-[100vw] h-[100vh] p-10 lg:p-30 " : "w-0 h-0"}`}
       >
-        {data.imageswebpages.map((d, i) => (
-          <SwiperSlide key={i}>
-              <button
-                onClick={() => setIsOpen(true)}
-                className="mb-10 flex size-full relative group overflow-hidden"
-              >
-                <img
-                  src={`/assets/photo/${data.url}/${d}.png`}
-                  className="size-full bg-cover"
-                  alt={d}
-                />
-                <div className="text-[16px] text-left  bg-[#00000081] backdrop-blur-md w-full absolute bottom-0 p-3">
-                  <p>{t(`projects.${data.url}.images${i + 1}`)}</p>
-                </div>
-              </button>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+        <div
+          onClick={() => setIsOpen(false)}
+          className={`${
+            isOpen ? "absolute top-0 left-0 bg-[#00000081] size-full" : "hidden"
+          }`}
+        />
+        <SwiperCarruselDetails project={project} setIsOpen={setIsOpen} />
+      </div>
+      <div className="w-[90vw] lg:w-[40vw]">
+        <SwiperCarruselDetails project={project} setIsOpen={setIsOpen} />
+      </div>
     </div>
+  );
+};
+
+const SwiperCarruselDetails = ({ project, setIsOpen }) => {
+  const { t } = useTranslation();
+
+  return (
+    <Swiper
+      pagination={{ clickable: true }}
+      loop={true}
+      modules={[Autoplay]}
+      className="mySwiper h-full"
+      autoplay={{
+        delay: 2000,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+      }}
+      breakpoints={{
+        320: { slidesPerView: 1.2},
+      }}
+    >
+      {project.images.map((d, i) => (
+        <SwiperSlide key={i}>
+          <button
+            onClick={() => setIsOpen(true)}
+            className="flex flex-col size-full relative group overflow-hidden px-[-240px]"
+          >
+            <img
+              src={`/assets/photo/${project.url}/${d.name}.png`}
+              className="size-full bg-cover"
+              alt={d}
+            />
+            <div className="text-[14px] text-left bg-[#000000] backdrop-blur-md w-full p-3 border border-[#313131] ">
+              <p>{t(`projects.${project.no}.images.${i}.description`)}</p>
+            </div>
+          </button>
+        </SwiperSlide>
+      ))}
+    </Swiper>
   );
 };
 
