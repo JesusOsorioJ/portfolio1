@@ -227,7 +227,7 @@ export const Carrusel = ({filteredData}) => {
               <div className="relative w-full group overflow-hidden">
                 <img
                   src={`/assets/photo/${d.url}/${d.images[0].name}.png`}
-                  className="w-full h-[400px] bg-cover"
+                  className="w-full h-[400px] bg-cover group-hover:scale-150 duration-1000 ease-in-out"
                   alt={d.images[0].name}
                 />
                 <div className="bg-[#000000cb] size-full absolute top-0 translate-y-full group-hover:translate-y-0 duration-1000 ease-in-out p-10">
