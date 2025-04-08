@@ -198,8 +198,7 @@ export const Menu = ({
   );
 };
 
-export const Carrusel = ({filteredData}) => {
-  const { t } = useTranslation();
+export const Carrusel = ({ filteredData }) => {
   return (
     <div className="w-full flex flex-col items-center">
       <Swiper
@@ -213,38 +212,14 @@ export const Carrusel = ({filteredData}) => {
           pauseOnMouseEnter: true,
         }}
         breakpoints={{
-          320: { slidesPerView: 1},
-          800: { slidesPerView: 2},
-          1500: { slidesPerView: 3},
+          320: { slidesPerView: 1 },
+          800: { slidesPerView: 2 },
+          1500: { slidesPerView: 3 },
         }}
       >
         {filteredData.map((d, i) => (
           <SwiperSlide key={i}>
-            <a
-              href={`/details/${d.url}`}
-              className="flex flex-col duration-500"
-            >
-              <div className="relative w-full group overflow-hidden">
-                <img
-                  src={`/assets/photo/${d.url}/${d.images[0].name}.png`}
-                  className="w-full h-[400px] bg-cover group-hover:scale-150 duration-1000 ease-in-out"
-                  alt={d.images[0].name}
-                />
-                <div className="bg-[#000000cb] size-full absolute top-0 translate-y-full group-hover:translate-y-0 duration-1000 ease-in-out p-10">
-                  <p>{t(`projects.${d.no}.description`)}</p>
-                </div>
-              </div>
-
-              <div className="z-10 py-2">
-                <p className="text-[18px] uppercase">{d.name}</p>
-                <div className="flex flex-wrap gap-2 capitalize text-[#808080]">
-                  <p>{d.technologies.frontend[0]}</p>
-                  <p>{d.technologies.backend[0]}</p>
-                  <p>{d.technologies.database[0]}</p>
-                  <p>{d.technologies.test[0]}</p>
-                </div>
-              </div>
-            </a>
+            <DescriptionProject d={d} />
           </SwiperSlide>
         ))}
       </Swiper>
@@ -290,34 +265,37 @@ export const BuscarPorPaginacion = ({ filteredData }) => {
       )}
       <div className="flex flex-wrap gap-3 justify-center">
         {currentItems.map((d, i) => (
-          <a
-            key={i}
-            href={`/details/${d.url}`}
-            className="flex flex-col gap-1 duration-500"
-          >
-            <div className="relative w-full group overflow-hidden">
-              <img
-                src={`/assets/photo/${d.url}/${d.images[0].name}.png`}
-                className="h-[300px] w-[450px] bg-cover"
-                alt={d.images[0].name}
-              />
-              <div className="bg-[#000000cb] size-full absolute top-0 translate-y-full group-hover:translate-y-0 duration-1000 ease-in-out p-10">
-                <p>{t(`projects.${d.no}.description`)}</p>
-              </div>
-            </div>
-            <div className="z-10 py-2">
-              <p className="text-[18px] uppercase">{d.name}</p>
-              <div className="flex flex-wrap gap-2 capitalize text-[#808080]">
-                <p>{d.technologies.frontend[0]}</p>
-                <p>{d.technologies.backend[0]}</p>
-                <p>{d.technologies.database[0]}</p>
-                <p>{d.technologies.test[0]}</p>
-              </div>
-            </div>
-          </a>
+          <DescriptionProject d={d} key={i} className="h-[300px] w-[450px]" />
         ))}
       </div>
     </div>
+  );
+};
+
+const DescriptionProject = ({ d, className="w-full h-[400px]" }) => {
+  const { t } = useTranslation();
+  return (
+    <a href={`/details/${d.url}`} className="flex flex-col duration-500">
+      <div className="relative w-full group overflow-hidden">
+        <img
+          src={`/assets/photo/${d.url}/${d.images[0].name}.png`}
+          className={`${className} bg-cover group-hover:scale-125 duration-1000 ease-in-out`}
+          alt={d.images[0].name}
+        />
+        <div className="bg-[#000000cb] size-full absolute top-0 translate-y-full group-hover:translate-y-0 duration-1000 ease-in-out p-10">
+          <p>{t(`projects.${d.no}.description`)}</p>
+        </div>
+      </div>
+      <div className="z-10 py-2">
+        <p className="text-[18px] uppercase">{d.name}</p>
+        <div className="flex flex-wrap gap-2 capitalize text-[#808080]">
+          <p>{d.technologies.frontend[0]}</p>
+          <p>{d.technologies.backend[0]}</p>
+          <p>{d.technologies.database[0]}</p>
+          <p>{d.technologies.test[0]}</p>
+        </div>
+      </div>
+    </a>
   );
 };
 
@@ -359,7 +337,7 @@ const SwiperCarruselDetails = ({ project, setIsOpen }) => {
         pauseOnMouseEnter: true,
       }}
       breakpoints={{
-        320: { slidesPerView: 1},
+        320: { slidesPerView: 1 },
       }}
     >
       {project.images.map((d, i) => (
@@ -689,14 +667,29 @@ export function EfectoPrincipal() {
         <defs>
           <mask id="textMask">
             <rect width="100%" height="100%" fill="white" />
-            <g 
-              transform={translate}
-              fill="black"
-            >
+            <g transform={translate} fill="black">
               <path d="M0,20v32v8v152h232V60v-8V20H0z M224,204H8V60h216V204z M224,52H8V28h216V52z" />
-              <circle cx="20" cy="40" r="8" className="animate-pulse " style={{ animationDuration: "0.8s" }}/>
-              <circle cx="40" cy="40" r="8" className="animate-pulse" style={{ animationDelay: "150ms", animationDuration: "0.8s" }}/>
-              <circle cx="60" cy="40" r="8" className="animate-pulse" style={{ animationDelay: "300ms", animationDuration: "0.8s" }}/>
+              <circle
+                cx="20"
+                cy="40"
+                r="8"
+                className="animate-pulse "
+                style={{ animationDuration: "0.8s" }}
+              />
+              <circle
+                cx="40"
+                cy="40"
+                r="8"
+                className="animate-pulse"
+                style={{ animationDelay: "150ms", animationDuration: "0.8s" }}
+              />
+              <circle
+                cx="60"
+                cy="40"
+                r="8"
+                className="animate-pulse"
+                style={{ animationDelay: "300ms", animationDuration: "0.8s" }}
+              />
               <path
                 id="parte1"
                 className="hidden"
@@ -853,7 +846,12 @@ function SunMoonToggle() {
   );
 }
 
-export const Herramientas = ({data=technologies, quitarTexto=true,  svgSize="50px", classAdd=""  }) => {
+export const Herramientas = ({
+  data = technologies,
+  quitarTexto = true,
+  svgSize = "50px",
+  classAdd = "",
+}) => {
   return (
     <div className="flex flex-col w-full gap-4">
       {Object.keys(data).map((d) => (
