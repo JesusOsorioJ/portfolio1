@@ -638,7 +638,7 @@
       ],
       "images": [
         {
-          "name": "login",
+          "name": "createnote",
           "description": "Login and user creation"
         },
         {
