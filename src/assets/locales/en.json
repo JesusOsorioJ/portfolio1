@@ -1000,6 +1000,48 @@
           "description": "Dark/light theme, internationalization, and responsive design."
         }
       ]
+    },
+    {
+      "no": 18,
+      "name": "Adereso",
+      "url": "adereso",
+      "participants": [
+        {
+          "rol": "developer",
+          "name": "Jesus Osorio Jimenez",
+          "linkedin": "https://www.linkedin.com/in/jesus-david-osorio-jimenez/"
+        }
+      ],
+      "technologies": {
+        "frontend": ["vite", "react", "tailwind"],
+        "backend": ["node", "express"],
+        "database": [],
+        "test": []
+      },
+      "frontend": "https://github.com/JesusOsorioJ/adereso",
+      "backend": "https://github.com/JesusOsorioJ/adereso",
+      "webpage": null,
+      "videopage": null,
+      "description": "Adereso Challenge: A project designed to test problem-solving automation skills using AI.",
+      "characteristics": [
+        "Solve a sequence of problems within a time limit by retrieving and responding to challenges via an API.",
+        "Each problem is written in natural language and its solution is a number calculated from the attributes of various objects.",
+        "Example: In a galaxy far, far away, Luke Skywalker is on the planet Tatooine where he decides to train his new Pokémon companion, Vulpix. As Luke swings his lightsaber, he wonders how much experience he will gain from training with Vulpix if its mass is multiplied by the base experience that this Pokémon can achieve. How powerful will Luke become with the help of his Pokémon friend?"
+      ],
+      "images": [
+        {
+          "name": "cargarReto",
+          "description": "Loading screen of the first challenge (loop start)"
+        },
+        {
+          "name": "retoCargado",
+          "description": "Loop started to solve the chain of supplied challenges"
+        },
+        {
+          "name": "ejecucionBack",
+          "description": "Execution of the code directly in the backend within the todo.js file"
+        }
+      ]
     }
   ]
 }

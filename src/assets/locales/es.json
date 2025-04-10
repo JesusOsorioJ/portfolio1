@@ -1000,6 +1000,48 @@
           "description": "Tema oscuro/claro, internacionalización y diseño responsivo."
         }
       ]
+    },
+    {
+      "no": 18,
+      "name": "Adereso",
+      "url": "adereso",
+      "participants": [
+        {
+          "rol": "developer",
+          "name": "Jesus Osorio Jimenez",
+          "linkedin": "https://www.linkedin.com/in/jesus-david-osorio-jimenez/"
+        }
+      ],
+      "technologies": {
+        "frontend": ["vite", "react", "tailwind"],
+        "backend": ["node", "express"],
+        "database": [],
+        "test": []
+      },
+      "frontend": "https://github.com/JesusOsorioJ/adereso",
+      "backend": "https://github.com/JesusOsorioJ/adereso",
+      "webpage": null,
+      "videopage": null,
+      "description": "Desafío Adereso: Proyecto diseñado para poner a prueba habilidades de automatización en la resolución de problemas mediante inteligencia artificial.",
+      "characteristics": [
+        "Resolver una secuencia de problemas en un tiempo limitado, obteniéndolos y respondiéndolos a través de una API.",
+        "Cada problema está redactado en lenguaje natural y su solución es un número calculado a partir de los atributos de diferentes objetos.",
+        "Ejemplo: En una galaxia muy, muy lejana, Luke Skywalker se encuentra en el planeta Tatooine, donde ha decidido entrenar a su nuevo compañero Pokémon, Vulpix. Mientras Luke mueve su sable de luz, se pregunta cuánta experiencia ganará al entrenar con Vulpix si su masa se multiplica por la experiencia base que este Pokémon puede alcanzar. ¿Qué tan poderoso se volverá Luke con la ayuda de su amigo Pokémon?"
+      ],
+      "images": [
+        {
+          "name": "cargarReto",
+          "description": "Pantalla de carga del primer reto (inicio del bucle)"
+        },
+        {
+          "name": "retoCargado",
+          "description": "Bucle iniciado para la solución en cadena del reto suministrado"
+        },
+        {
+          "name": "ejecucionBack",
+          "description": "Ejecución del código directamente en el backend dentro del archivo todo.js"
+        }
+      ]
     }
   ]
 }
