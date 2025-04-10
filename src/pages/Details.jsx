@@ -8,7 +8,7 @@ import {
   Menu,
 } from "../components/MyComponent";
 import { useParams } from "react-router-dom";
-import data from "../assets/locales/en.json";
+import data from "../assets/locales/es.json";
 import { useTranslation } from "react-i18next";
 import { SeccionBuscador } from "./Home";
 import { ToolSvg } from "../components/Icons";

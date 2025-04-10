@@ -11,7 +11,7 @@ import {
   Herramientas,
   Menu,
 } from "../components/MyComponent";
-import data from "../assets/locales/en.json";
+import data from "../assets/locales/es.json";
 
 export default function Home({
   inicio,
