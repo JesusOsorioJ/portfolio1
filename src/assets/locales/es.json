@@ -1042,6 +1042,54 @@
           "description": "Ejecución del código directamente en el backend dentro del archivo todo.js"
         }
       ]
+    },
+    {
+      "no": 18,
+      "name": "Crud nest",
+      "url": "crudnest",
+      "participants": [
+        {
+          "rol": "developer",
+          "name": "Jesus Osorio Jimenez",
+          "linkedin": "https://www.linkedin.com/in/jesus-david-osorio-jimenez/"
+        }
+      ],
+      "technologies": {
+        "frontend": [ "vite", "react", "tailwind", "socket", "i18next" ],
+        "backend": ["nest", "express"],
+        "database": ["postgresql"],
+        "test": []
+      },
+      "frontend": "https://github.com/JesusOsorioJ/crud-nest",
+      "backend": "https://github.com/JesusOsorioJ/crud-nest",
+      "webpage": null,
+      "videopage": null,
+      "description": "",
+      "characteristics": [
+        ""
+      ],
+      "images": [
+        {
+          "name": "crudtable",
+          "description": ""
+        },
+        {
+          "name": "docker",
+          "description": ""
+        },
+        {
+          "name": "login",
+          "description": ""
+        },
+        {
+          "name": "socket",
+          "description": ""
+        },
+        {
+          "name": "swagger",
+          "description": ""
+        }
+      ]
     }
   ]
 }
