@@ -36,6 +36,11 @@
   "webPage": "Página Web",
   "expand": "Expandir",
   "coursesCertifications": "Cursos y certificaciones",
+  "sqlTitle": "SQL con",
+  "sqlSubtitle": "Prueba este SQL con IA",
+  "sqlText": "Este es un proyecto de SQL con una interfaz interactiva donde podrás crear tablas y ejecutar consultas SQL asistido por IA. Además, puedes ajustar cada aspecto a tu gusto. Con tan solo un párrafo descriptivo, el sistema generará automáticamente tus tablas de entidad-relación. ¡Explora a fondo y dale forma a tu base de datos en tiempo real!",
+  "goToProject": "Ver proyecto",
+  "backToPortfolio": "Volver al portafolio",
   "experience": [
     {
       "name": "• Disruptive Studio, Guadalajara, Mexico",

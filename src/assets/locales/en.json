@@ -36,6 +36,11 @@
   "webPage": "Web page",
   "expand": "Expand",
   "coursesCertifications": "Courses and certifications",
+  "sqlTitle": "SQL with",
+  "sqlSubtitle": "Try this SQL with AI",
+  "sqlText": "This is a SQL project with an interactive interface where you can create tables and run SQL queries assisted by AI. You can also customize every aspect to your liking. With just a descriptive paragraph, the system will automatically generate your entity-relationship tables. Dive deep and shape your database in real time!",
+  "goToProject": "Go to project",
+  "backToPortfolio": "Back to portfolio",
   "experience": [
     {
       "name": "• Disruptive Studio, Guadalajara, Mexico",
