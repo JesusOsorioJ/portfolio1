@@ -36,6 +36,13 @@ export default function Home({
     inicio.current?.scrollIntoView({ behavior: "smooth" });
   }, []);
 
+  useEffect(() => {
+    fetch(import.meta.env.VITE_VISIT_TRACKER_URL, {
+      method: "POST",
+    }).catch((err) => console.error("Error registrando", err));
+  }, []);
+
+
   return (
     <>
       <EfectoPrincipal />
